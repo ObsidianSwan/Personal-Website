@@ -9,6 +9,7 @@
 		<meta name="description" content="Holly Boothroyd" />
 		
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet"> 
 		<link rel="stylesheet" type="text/css" href="photocontainer.css" />
 		<link rel="stylesheet" type="text/css" href="timeline.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
@@ -16,18 +17,23 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="jquery.fullpage.css" />
 		
+
+		<script type="text/javascript" src="fullpage/vendors/scrolloverflow.min.js"></script>
+
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="fullpage/src/fullpage.js"></script>
+		<script type="text/javascript" src="fullpage/examples/examples.js"></script>
 
-		<script type="text/javascript" src="http://expansionscollective.com/testscripts/jquery.fullPage.js"></script>
 		<script>
 			$(document).ready(function() {
 				$('#fullpage').fullpage({
-					anchors: ['home', 'developer', 'community', 'graduate', 'experience', 'recognition', 'connect'],
+					anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7'],
 					sectionsColor: ['white','#f4a24c','white','#13a3b5','white', '#a6d050','white'],
-					slidesNavigation: true,
 					css3: true,
+					scrollOverflow: true,
+					verticalCentered: true,
 				});
 			});
 		</script>	
@@ -89,10 +95,10 @@
 			}
 			
 			function showPerformanceAward() {
-				document.getElementById('modal-title-contents').innerHTML = 'IBM Prize for Excellent Placement Year Performance';
+				document.getElementById('modal-title-contents').innerHTML = 'IBM Prize for Best Performance & IBM Prize for Excellent Placement Year Performance';
 				document.getElementById('modal-body-img').src = "images/bestoverall.jpg";
 				document.getElementById('modal-body-contents').innerHTML = 
-				'I was awarded this prize for graduating at the top of my class and maintaining the highest mark in my degree each year.';
+				'I was awarded the best performance prize for graduating at the top of my class and maintaining the highest mark in my degree each year. I was further awarded for excellent placement performance and significant workplace contributions.';
 			}
 			
 			function showPlacementAward() {
@@ -106,16 +112,21 @@
 	<body>
 		<style>
 		body {
-		  margin: 0;
-		  font-size: 1.2em;
+		  font-size: calc(12px + .3vw);
+		  font-family: 'Roboto', sans-serif;
+		  color: #1d2124;
+		  height: 100%;
+		  
 		}
 		
-		section {
-			padding-top: 10px;
-			padding-left: 15%;
-			padding-bottom: 30px;
-			padding-right: 15%;
-			color: #1d2124;
+		.container-fluid {
+			padding-left: calc(10% + 4vw);
+			padding-right: calc(10% + 4vw);
+			height: 100%;
+		}
+		
+		.container-fluid h2 {
+			font-size: calc(15px + 1vw);
 		}
 		
 		a {
@@ -145,7 +156,7 @@
 			text-decoration: underline;
 		}
 		
-		h2, h4,  .centeredSubTitles {
+		h2, h4, .centeredSubTitles {
 			text-align: center;
 			padding-top: 20px;
 			padding-bottom: 10px;
@@ -161,6 +172,8 @@
 		
 		.greycontainer {
 			box-shadow: 0px 4px 10px 0px #70808c;
+			width: 70%;
+			padding-top: 10%;
 		}
 		
 		.bluecontainter {
@@ -187,11 +200,14 @@
 		}
 		
 		#selfportait {
-			margin-top: 15%;
+			width: 70%;
+			display: block; 
+			margin: 0px auto;
+			padding-top: 10%
 		}
 		
-		#about h2{
-			margin-top: 15%;
+		#about {
+			padding-top: 10%
 		}
 		
 		#developer {
@@ -223,12 +239,13 @@
 		}
 		
 		#recognition li {
-			margin: 10px 0 10px 0;
+			margin: 5% 0 5% 0;
+			font-size: calc(10px + .6vw);
 		}
 		
 		#recognition h6 {
 			display: inline;
-			font-size: 20px;
+			font-size: calc(12px + .6vw);
 			font-weight: bold;
 		}
  
@@ -325,11 +342,11 @@
 		<div id="fullpage">
 			<section class="section active" id="home">
 				<div class="container-fluid">
-					<div class="row d-flex">
-						<div class="col-sm-6 mx-auto my-auto">
-							<img class="greycontainer rounded-circle img-fluid" id="selfportait" src="images/profiletemp.jpg" alt="profile">
+					<div class="row" style="padding-top:4%;">
+						<div class="col-sm-6">
+							<img class="greycontainer rounded-circle my-auto img-fluid" id="selfportait" src="images/profile.jpg" alt="profile">
 						</div>
-						<div class="col-sm-6 mx-auto my-auto float-right" id="about">
+						<div class="col-sm-6 my-auto float-right" id="about">
 							<h2>Hi, I'm Holly!</h2>
 							<br/>
 							<p>I am a passionate developer with a keen interest in the latest technologies. 
@@ -353,127 +370,123 @@
 					<b>Languages: </b> C++, C#, C++/CX, Java, HTML, CSS, Javascript, PHP, Python and XAML. 
 
 					<h6 class="centeredSubTitles">Projects</h6>
-						<div class="row d-flex">
-						<div class="col-sm-4 mx-auto my-auto">
+						<div class="row">
+						<div class="col-sm-4">
 						</div>
-						<div class="col-sm-4 mx-auto my-auto">
+						<div class="col-sm-4">
 							<a href="https://github.com/ObsidianSwan/Sync" target="_blank"><img class="orangecontainer rounded img-fluid" id="sync" src="images/sync.png" alt="Sync"></a>
 						</div>
-						<div class="col-sm-4 mx-auto my-auto">
+						<div class="col-sm-4">
 						</div>
 					</div>
-					
-				</div> 
+				</div>
 			</section>
 			<section class="section" id="community">
 				<div class="container-fluid">
 					<h2>Community Builder</h2>
-					<!--this needs desperate updating-->
-					<p>I lead and engage with multiple organizations to support the growth of my fellow 
-					peers and related institutions.	As Vice President of the University of Surrey's <a class="textlinksblack" href="https://www.facebook.com/ComputingSoc/" target="_blank">Computing Society</a>, 
-					my efforts focused on delivering career development opportunities, increasing industrial awareness
-					and engagement, and importantly supporting the progession of women in STEM. 
-					<br/>
-					<br/>
-					As an advocate for women in STEM, I led and organized the first <a class="textlinksblack" href="documents/athenaswan" target="_blank">Women in STEM panel and networking event</a> in
-					partnership with other Surrey STEM-based societies. 
-					<!--rhetoric that girls should code-->
-					</p>
-					<div class="row d-flex">
-						<div class="col-sm-4 mx-auto my-auto">
-							<a onclick="showPanel()" data-toggle="modal" data-target="#imgModal">
-								<div class="photocontainer">
-									<img class="imgModal greycontainer rounded img-fluid" id="stempanel" src="images/stempanel.jpg" alt="Stem Panel">
-									<div class="content">
-										<h6><b>Defying the Odds: Women in STEM Panel</b></h6>
+					<div class="section-contents">
+						<p>I lead and engage with multiple organizations to support the growth of my fellow 
+						peers and related institutions.	As Vice President of the University of Surrey's <a class="textlinksblack" href="https://www.facebook.com/ComputingSoc/" target="_blank">Computing Society</a>, 
+						my efforts focused on delivering career development opportunities, increasing industrial awareness
+						and engagement, and importantly supporting the progession of women in STEM. 
+						<br/>
+						<br/>
+						As an advocate for women in STEM, I led and organized the first <a class="textlinksblack" href="documents/athenaswan" target="_blank">Women in STEM panel and networking event</a> in
+						partnership with other Surrey STEM-based societies. 
+						</p>
+						<div class="row" style="padding-top:3%">
+							<div class="col-sm-4">
+								<a onclick="showPanel()" data-toggle="modal" data-target="#imgModal">
+									<div class="photocontainer">
+										<img class="imgModal greycontainer rounded img-fluid" id="stempanel" src="images/stempanel.jpg" alt="Stem Panel">
+										<div class="content">
+											<h6><b>Defying the Odds: Women in STEM Panel</b></h6>
+										</div>
 									</div>
-								</div>
-							</a>
+								</a>
+							</div>
+							<div class="col-sm-4">
+								<a onclick="showGoldman()" data-toggle="modal" data-target="#imgModal">
+									<div class="photocontainer">
+										<img class="greycontainer rounded img-fluid" id="goldmansachs" src="images/goldmansachs.jpeg" alt="Goldman Sachs">
+										<div class="content">
+											<h6><b>Goldman Sachs' Code Your Escape</b></h6>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-sm-4">
+								<a onclick="showContractor()" data-toggle="modal" data-target="#imgModal">
+									<div class="photocontainer">
+										<img class="greycontainer rounded img-fluid" id="contracting101" src="images/contracting101.png" alt="Contracting 101">
+										<div class="content">
+											<h6><b>Contracting 101: How to be a Contractor</b></h6>
+										</div>
+									</div>
+								</a>
+							</div>
 						</div>
-						<div class="col-sm-4 mx-auto my-auto">
-							<a onclick="showGoldman()" data-toggle="modal" data-target="#imgModal">
-								<div class="photocontainer">
-									<img class="greycontainer rounded img-fluid" id="goldmansachs" src="images/goldmansachs.jpeg" alt="Goldman Sachs">
-									<div class="content">
-										<h6><b>Goldman Sachs' Code Your Escape</b></h6>
+						<div class="row">
+							<div class="col-sm-4">
+								<a onclick="showOpenDay()" data-toggle="modal" data-target="#imgModal">
+									<div class="photocontainer">
+										<img class="greycontainer rounded img-fluid" id="openday" src="images/openday.png" alt="Open Day">
+										<div class="content">
+											<h6><b>Computing Open Day Assistant</b></h6>
+										</div>
 									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-sm-4 mx-auto my-auto">
-							<a onclick="showContractor()" data-toggle="modal" data-target="#imgModal">
-								<div class="photocontainer">
-									<img class="greycontainer rounded img-fluid" id="contracting101" src="images/contracting101.png" alt="Contracting 101">
-									<div class="content">
-										<h6><b>Contracting 101: How to be a Contractor</b></h6>
+								</a>
+							</div>
+							<div class="col-sm-4">
+								<a onclick="showAmbassador()" data-toggle="modal" data-target="#imgModal">
+									<div class="photocontainer">
+										<img class="greycontainer rounded img-fluid" id="ambassadorblog" src="images/ambassadorblog.jpg" alt="Ambassador Blog">
+										<div class="content">
+											<h6><b>International Student Ambassador</b></h6>
+										</div>
 									</div>
-								</div>
-							</a>
+								</a>
+							</div>
+							<div class="col-sm-4">
+								<a onclick="showCourseRep()" data-toggle="modal" data-target="#imgModal">
+									<div class="photocontainer">
+										<img class="greycontainer rounded img-fluid" id="courserep" src="images/courserep.jpg" alt="Course Rep">
+										<div class="content">
+											<h6><b>Computing Course Representative</b></h6>
+										</div>
+									</div>
+								</a>
+							</div>
 						</div>
 					</div>
-					<div class="row d-flex">
-						<div class="col-sm-4 mx-auto my-auto">
-							<a onclick="showOpenDay()" data-toggle="modal" data-target="#imgModal">
-								<div class="photocontainer">
-									<img class="greycontainer rounded img-fluid" id="openday" src="images/openday.png" alt="Open Day">
-									<div class="content">
-										<h6><b>Computing Open Day Assistant</b></h6>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-sm-4 mx-auto my-auto">
-							<a onclick="showAmbassador()" data-toggle="modal" data-target="#imgModal">
-								<div class="photocontainer">
-									<img class="greycontainer rounded img-fluid" id="ambassadorblog" src="images/ambassadorblog.jpg" alt="Ambassador Blog">
-									<div class="content">
-										<h6><b>International Student Ambassador</b></h6>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-sm-4 mx-auto my-auto">
-							<a onclick="showCourseRep()" data-toggle="modal" data-target="#imgModal">
-								<div class="photocontainer">
-									<img class="greycontainer rounded img-fluid" id="courserep" src="images/courserep.jpg" alt="Course Rep">
-									<div class="content">
-										<h6><b>Computing Course Representative</b></h6>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>						
 				</div>
-			</section> 
+			</section>
 
 			<section class="section" id="graduate">
 				<div class="container-fluid">
 					<h2>A Recent Graduate</h2> 
 					<p>... from the University of Surrey with a BSc(Hons) degree in 
 					<a class="textlinkswhite" href="https://www.surrey.ac.uk/undergraduate/computing-and-information-technology" target="_blank">Computing and Information technology</a>
-					where I learnt primarily computer science topics supplemented with business management and entrepreneurship modules. I was 
-					honored to be awarded the "IBM Prize for Best Final Year Performance".
+					where I learnt primarily computer science topics supplemented with business management and entrepreneurship modules. I was honored to be awarded the "IBM Prize for Best Final Year Performance".
 					</br>
 					</br>
 					As a part of my studies, I completed an industrial placement year at Microsoft as a software engineer working on <a class="textlinkswhite" href="https://www.lift.london/" target="_blank">Paint 3D in London.</a>
 					This led to the opportunity to work on the Xbox team at Microsoft's HQ in Redmond, WA for a period of three months. I was incredibly 
-					fortunate to work on both of these teams who <a class="textlinkswhite" href="http://blogs.surrey.ac.uk/careers/2018/04/10/my-professional-training-year-holly-boothroyd-microsoft/" target="_blank">I learnt so much from</a>. 
-					For my contributions towards my workplaces, my peers, and my university for work completed during my placement, I was awarded the "Best Placement Student of the Year for the Faculty 
-					of Engineering and Physical Science" and the "IBM Prize for Excellent Placement Year Performance".
+					fortunate to work on both of these teams from whom <a class="textlinkswhite" href="http://blogs.surrey.ac.uk/careers/2018/04/10/my-professional-training-year-holly-boothroyd-microsoft/" target="_blank">I learnt so much from</a>. 
 					</p>
 					
-					<div class="row d-flex">
-						<div class="col-sm-6 mx-auto my-auto">
+					<div class="row" style="padding-top:3%">
+						<div class="col-sm-6">
 							<a onclick="showPerformanceAward()" data-toggle="modal" data-target="#imgModal">
 								<div class="photocontainer">
 									<img class="bluecontainter rounded img-fluid" id="bestoverall" src="images/bestoverall.jpg" alt="Best Overall">
 									<div class="content">
-										<h6><b>IBM Prize for Excellent Placement Year Performance</b></h6>
+										<h6><b>IBM Prize for Best Performance & IBM Prize for Excellent Placement Year Performance</b></h6>
 									</div>
 								</div>
 							</a>
 						</div>
-						<div class="col-sm-6 mx-auto my-auto">
+						<div class="col-sm-6">
 							<a onclick="showPlacementAward()" data-toggle="modal" data-target="#imgModal">
 								<div class="photocontainer">
 									<img class="bluecontainter rounded img-fluid" id="placementaward" src="images/placementaward.png" alt="Placement Award">
@@ -583,11 +596,11 @@
 								<li><h6 class="award" >Gold Course Representative Award |</h6> 2018</li>
 								<li><h6 class="award" >Best Placement Student of the Year for the Faculty of Engineering and Physical Science |</h6> 2018</li>
 								<li><h6 class="award" >Winner of the Internet of Things Module Programming Competition |</h6> 2017</li>
+								<li><h6 class="award" >Member of the Students to STEMettes Programme |</h6> 2016 -2017</li>
 							</ul>
 						</div>
 						<div class="col-sm-6">
 							<ul>
-								<li><h6 class="award" >Member of the Students to STEMettes Programme |</h6> 2016 -2017</li>
 								<li><h6 class="award" >The Sheppard Memorial Prize |</h6> 2016</li>
 								<li><h6 class="award" >University of Surrey's Advanced Ballet Team |</h6> 2015-2016 </li>
 								<li><h6 class="award" >Member of the Surrey’s Top Achievers Recognized and Supported Scheme |</h6> 2014-2018</li>
