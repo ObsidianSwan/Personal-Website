@@ -10,7 +10,7 @@
 	}
 	.main-timeline .timeline { 
 		position: relative;
-		margin-top: 20px;
+		padding-top: 2%;
 	}
 	
 	.main-timeline .timeline:before,
@@ -27,14 +27,14 @@
 		height: 100%;
 		background: #f4a24c;
 		padding-top: 15px;
-		margin: -15px auto 10px auto;
+		margin: 0px auto;
 		position: absolute;
 		top: -50%;
 		left: 0;
 		right: 0;
 	}
 	.main-timeline .timeline:first-child:before{
-		height: 50%;
+		height: 100%;
 		border-radius: 10px 10px 0 0;
 		top: 0;
 	}
@@ -110,7 +110,7 @@
 		font-size: calc(10px + .3vw);
 		font-weight: bold;
 		line-height: calc(10px + .3vw);
-		color: #fff;
+		color: #ffffff;
 	}
 	.main-timeline .timeline:nth-child(2n) .timeline-icon:before{
 		border-right: none;

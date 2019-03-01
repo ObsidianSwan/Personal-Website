@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>I'm Holly.</title>
+		<meta name="author" content="Holly Boothroyd" />
+		<meta name="description" content="Holly Boothroyd" />
+		
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="styles/photocontainer.css" />
+		<link rel="stylesheet" type="text/css" href="styles/timeline.css" />
+		<link rel="stylesheet" type="text/css" href="styles/carousel.css" />
+		<link rel="stylesheet" type="text/css" href="styles/timeline.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+		integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="jquery.fullpage.css" />
+		
+
+		<script type="text/javascript" src="fullpage/vendors/scrolloverflow.min.js"></script>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/scrollreveal"></script>
+
+		<script>			
+			function showPerformanceAward() {
+				document.getElementById('modal-title-contents').innerHTML = 'IBM Prize for Best Performance & IBM Prize for Excellent Placement Year Performance';
+				document.getElementById('modal-body-img').src = "images/bestoverall.jpg";
+				document.getElementById('modal-body-contents').innerHTML = 
+				'I was awarded the best performance prize for graduating at the top of my class and maintaining the highest mark in my degree each year. I was further awarded for excellent placement performance and significant workplace contributions.';
+			}
+			
+			function showPlacementAward() {
+				document.getElementById('modal-title-contents').innerHTML = 'Best Placement Student of the Year for the Faculty of Engineering and Physical Science';
+				document.getElementById('modal-body-img').src = "images/placementaward.png";
+				document.getElementById('modal-body-contents').innerHTML = 
+				'I significantly contributed to the work of my employer, the enhancement of other students development and experiences, and in building partnerships between Surrey University and industry.';
+			}
+		</script>		
+	</head>
+	<body>
+		<style>
+		body {
+		  font-size: calc(1em + .3vw);
+		  font-family: 'Roboto', sans-serif;
+		  color: #1d2124;
+		  height: 100%;
+		  
+		}
+		
+		h2, h4, .centeredSubTitles {
+			text-align: center;
+			padding-top: 20px;
+			padding-bottom: 10px;
+			font-weight: bold;
+			letter-spacing: 0.2em;
+			font-family: 'Josefin Sans', sans-serif;
+			text-transform: uppercase;
+		}
+		
+		.container-fluid {
+			padding-top: 7%;
+			padding-bottom: 5%;
+			padding-left: calc(10% + 4vw);
+			padding-right: calc(10% + 4vw);
+			height: 100%;
+		}
+		
+		.container-fluid h2 {
+			font-size: calc(1.5em + 1vw);
+		}
+		
+		a {
+			text-decoration: none;
+			font-weight: bold;
+			color: #1d2124;
+		}
+		
+		a:hover { 			
+			color: #1d2124;
+			text-decoration: underline;
+		}
+		
+		.modal-dialog {
+			margin: 1.5% auto;
+		}
+		.modal-content {
+			background-color: #1d2124;
+			color: white;
+			text-align: center;
+		}
+
+		.modal-content h4{
+			font-size: 1em;
+		}
+
+		.modal-content a:hover{
+			color: red;
+		}
+
+		#modal-body-contents {
+			margin: 5% 3% 0 3%;
+		}
+
+		#modal-content button {
+			float: right;
+		}
+
+		.modal-content {
+		  width:100%;
+		}
+
+		.modal-dialog-centered {
+		  display:-webkit-box;
+		  display:-ms-flexbox;
+		  display:flex;
+		  -webkit-box-align:center;
+		  -ms-flex-align:center;
+		  align-items:center;
+		  min-height:calc(100% - (.5rem * 2));
+		}
+
+		@media (min-width: 576px) {
+		  .modal-dialog-centered {
+			min-height:calc(100% - (1.75rem * 2));
+		  }
+}
+		
+		</style>
+		
+		<!-- Modal -->
+		<div id="imgModal" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title centeredTitle" id="modal-title-contents"></h4>
+					</div>
+					<div class="modal-body">
+						<img class="rounded img-fluid" id="modal-body-img" src="" alt="Modal Image">
+						<p id="modal-body-contents"></p>
+						<button type="button" class="close" style="color: white" data-dismiss="modal">&times;</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Nav Button -->
+		<div id="navbutton" >
+			<span class="fa-stack">
+				<a class="btn fa fa-circle fa-stack-1x" href="#home"></a>
+				<a class="btn fa fa-chevron-circle-up fa-3x fa-stack-1x" href="#home"></a>
+			</span>
+		</div>
+		
+		<!-- Core Content -->
+			<section class="section container-fluid" id="home">
+					<div class="row" >
+						<div class="col-sm-6" style="padding-top:35px">
+							<img class="my-auto img-responsive w-75" id="selfportait" src="images/profile.jpeg" alt="profile">
+						</div>
+						<div class="col-sm-6 my-auto float-right" style="padding-top:35px;" id="about">
+							<h2 class="centeredTitle" >{Hi, I'm Holly!}</h2>
+							<br/>
+							<p>I am a passionate developer with a keen interest in the latest technologies. 
+							With experience working on multiple robust globally released products, I strive to create
+							impact on others lives to be more creative, productive, and fun. 
+							<br/>
+							<br/>
+							Along with my development work, I actively support inclusion and diversity in the technology 
+							industry through various community events and organizations.
+						</div>
+					</div>
+			</section> 
+			
+			<section class="section container-fluid" id="experience">
+					<h2 class="centeredTitle" >Experience</h2>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="main-timeline">
+								<div class="timeline">
+									<span class="timeline-icon"></span>
+									<div class="timeline-content">
+										<i class="icon fa fa-windows"></i>
+										<p class="description">
+											<h5><a href="https://www.microsoft.com/en-gb/windows/cortana" target="_blank">Software Engineer | Cortana</a></h5>
+											<h6>Microsoft - London, England</h6>
+										</p>
+									</div>
+									<div class="year"><span>2017-Present</span></div>
+								</div>
+								<div class="timeline second">
+									<span class="timeline-icon"></span>
+									<div class="timeline-content">
+										<i class="icon fa fa-desktop"></i>
+										<p class="description">
+											<h5><a href="https://www.facebook.com/ComputingSoc/" target="_blank">VP of the Computing Society</a></h5>
+											<h6>University of Surrey - Guildford, England</h6>
+										</p>
+									</div>
+									<div class="year"><span>2017-2018</span></div>
+								</div>
+								<div class="timeline third">
+									<span class="timeline-icon"></span>
+									<div class="timeline-content">
+										<i class="icon fa fa-windows"></i>
+										<p class="description">
+											<h5><a href="https://www.xbox.com/" target="_blank">Software Engineering Intern | Xbox</a></h5>
+											<h6>Microsoft - Redmond, USA</h6>
+										</p>
+									</div>
+									<div class="year"><span>2017</span></div>
+								</div>
+								<div class="timeline fourth">
+									<span class="timeline-icon"></span>
+									<div class="timeline-content">
+										<i class="icon fa fa-windows"></i>
+										<p class="description">
+											<h5><a href="https://www.microsoft.com/en-gb/p/paint-3d/9nblggh5fv99?activetab=pivot:overviewtab" target="_blank">Software Engineering Intern | Paint 3D</a></h5>
+											<h6>Microsoft - London, England</h6>
+										</p>
+									</div>
+									<div class="year"><span>2016-2017</span></div>
+								</div>
+								<div class="timeline">
+									<span class="timeline-icon"></span>
+									<div class="timeline-content">
+										<i class="icon fa fa-globe"></i>
+										<p class="description">
+											<h5><a href="http://blogs.surrey.ac.uk/usablog/author/hb00191/" target="_blank">International Student Ambassador</a></h5>
+											<h6>University of Surrey - Guildford, England</h6>
+										</p>
+									</div>
+									<div class="year"><span>2015-2018</span></div>
+								</div>
+								<div class="timeline second">
+									<span class="timeline-icon"></span>
+									<div class="timeline-content">
+										<i class="icon fa fa-group"></i>
+										<p class="description">
+											<h5>Computer Science Applicant Day Presenter</h5>
+											<h6>University of Surrey - Guildford, England</h6>
+										</p>
+									</div>
+									<div class="year"><span>2015-2018</span></div>
+								</div>
+								<div class="timeline third">
+									<span class="timeline-icon"></span>
+									<div class="timeline-content">
+										<i class="icon fa fa-desktop"></i>
+										<p class="description">
+											<h5>Computer Science Lab Demonstrator</h5>
+											<h6>University of Surrey - Guildford, England</h6>
+										</p>
+									</div>
+									<div class="year"><span>2015</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row text-center">
+						<div class="col-12">
+							<a class="btn btn-primary" style="background-color: black" href="https://www.linkedin.com/in/holly-boothroyd-68308012a/" target="_blank">Learn More</a>
+						</div>
+					</div>
+			</section>
+			
+			<section class="section container-fluid" id="graduate">
+				<h2 class="centeredTitle" >A University of Surrey Graduate</h2> 
+				<p>... with a BSc(Hons) degree in 
+				<a href="https://www.surrey.ac.uk/undergraduate/computing-and-information-technology" target="_blank">Computing and Information technology</a>
+				where I learnt primarily computer science topics supplemented with business management, finance, and entrepreneurship modules. I was honored to be awarded the "IBM Prize for Best Final Year Performance".
+				</br>
+				</br>
+				As a part of my studies, I completed an industrial placement year at Microsoft as a software engineer working on <a href="https://www.lift.london/" target="_blank">Paint 3D in London.</a>
+				This led to the opportunity to work on the Xbox team at Microsoft's HQ in Redmond, WA for a period of three months. I was incredibly 
+				fortunate to work on both of these teams from whom <a href="http://blogs.surrey.ac.uk/careers/2018/04/10/my-professional-training-year-holly-boothroyd-microsoft/" target="_blank">I learnt so much from</a>. 
+				</p>
+				
+				<div class="row" style="padding-top:3%">
+					<div class="col-sm-6">
+						<a onclick="showPerformanceAward()" data-toggle="modal" data-target="#imgModal">
+							<div class="photocontainer">
+								<img class="rounded img-fluid" id="bestoverall" src="images/bestoverall.jpg" alt="Best Overall">
+								<div class="content">
+									<h6><b>IBM Prize for Best Performance & IBM Prize for Excellent Placement Year Performance</b></h6>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-6">
+						<a onclick="showPlacementAward()" data-toggle="modal" data-target="#imgModal">
+							<div class="photocontainer">
+								<img class="rounded img-fluid" id="placementaward" src="images/placementaward.png" alt="Placement Award">
+								<div class="content">
+									<h6><b>Best Placement Student of the Year for the Faculty of Engineering and Physical Science</b></h6>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			
+			<section class="section container-fluid" id="community">
+					<h2 class="centeredTitle" >Community Efforts</h2>
+					<div class="section-contents">
+						<p>I actively engage with multiple organizations - <a href="https://www.surrey.ac.uk/" target="_blank">University of Surrey</a>, 
+						<a href="https://www.microsoft.com/en-us/diversity/programs/digigirlz/default.aspx" target="_blank">DigiGirlz</a>, and 
+						<a href="https://www.codefirstgirls.org.uk/" target="_blank">Code First: Girls</a> - to support the growth of my fellow 
+						peers and related institutions.	My motivation is to empower others in finding their success whether it be my fellow Surrey students or by advocating for women in STEM. 
+						My efforts focus on delivering career development opportunities, mentorship, and increasing student industrial awareness and engagement.  
+						</p>
+						
+						<div id="communityCarousel" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#communityCarousel" data-slide-to="0" class="active"></li>
+								<li data-target="#communityCarousel" data-slide-to="1"></li>
+								<li data-target="#communityCarousel" data-slide-to="2"></li>
+								<li data-target="#communityCarousel" data-slide-to="3"></li>
+							</ol>
+							<div class="carousel-inner">								
+								<div class="photocontainer carousel-item">
+									<img class="d-block h-85 w-85 " src="images/stempanel.jpg" alt="Stem Panel">
+									<div id="item" class="carousel-caption d-none d-md-block">
+										<span><h5>Defying the Odds: Women in STEM Panel</h5></span>
+										<p>As VP of the Computing Society, I organized a panel discussion about the challenges of being a woman in STEM and to provide advice for achieving success within the STEM industries. The panel offered a collection of perspectives from an international array of women whos roles ranged from engineer to Vice President from companies like <a href="https://www.amazon.co.uk/" target="_blank">Amazon,</a> <a href="https://www.goldmansachs.com/" target="_blank">Goldman Sachs,</a> and <a href="http://www.intecsea.com/" target="_blank">Intecsea</a></p>
+									</div>
+								</div>
+								<div class="photocontainer carousel-item">
+									<img class="d-block h-85 w-85 " src="images/digigirlz.png" alt="DigiGirlz">
+									<div id="item" class="carousel-caption d-none d-md-block">
+										<h5>DigiGirlz Volunteer</h5>
+										<p>Attended by over 150+ year 8 girls from a variety of local UK schools, I assisted the girls during the brainstorming and implementation phases of an accessibility hackathon, and provided presentation feedback and advice in anticipation of their project judging by Cindy Rose, the CEO of Microsoft UK.</p>
+									</div>
+								</div>
+								<div class="photocontainer carousel-item">
+									<img class="d-block h-85 w-85 " src="images/scratchjr.png" alt="Scratch JR">
+									<div id="item" class="carousel-caption d-none d-md-block">
+										<h5>Introduced Scratch Jr into a Montessori Preschool</h5>
+										<p>In an effort to counter the concept that STEM is "just for boys", I introduced Scratch JR into a local Montessori preschool's curriculum. The feedback from both the girls and parents was incredibly positive with one girl remarking the programming was her favorite bit!</p>
+									</div>
+								</div>
+								<div class="photocontainer carousel-item active">
+									<img class="d-block h-85 w-85 " src="images/courserep.jpg" alt="Course Rep">
+									<div id="item" class="carousel-caption d-none d-md-block">
+										<h5>Computing Course Representative</h5>
+										<p>Over four years, I actively championed the development and improvement of the department and wider university based on student feedback and personal observations. I worked collaboratively with the department to ensure a constructive solution was identified and implemented. For my efforts, I was awarded the Gold Course Representative Award.</p>
+									</div>
+								</div>
+
+							</div>
+							<a class="carousel-control-prev" href="#communityCarousel" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#communityCarousel" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+			</section>
+
+			<section class="section container-fluid" id="recognition">
+					<h2 class="centeredTitle" >Recognition</h2>
+					<div class="row wide-gutter">
+						<div class="col-sm-6">
+							<ul>
+								<li><h6 class="award" >Winner of the Unite 2030: Hack for the Planet Hackathon |</h6> 2018</li>
+								<li><h6 class="award" >IBM Prize for Best Final Year Performance |</h6> 2018</li>
+								<li><h6 class="award" >IBM Prize for Excellent Placement Year Performance |</h6> 2018</li>
+								<li><h6 class="award" >BCS High Performing Graduate Professional Membership Award |</h6> 2018</li>
+								<li><h6 class="award" >Computing Society Gold STAR Award |</h6> 2018</li>
+								<li><h6 class="award" >Gold Course Representative Award |</h6> 2018</li>
+								<li><h6 class="award" >Best Placement Student of the Year for the Faculty of Engineering and Physical Science |</h6> 2018</li>
+								<li><h6 class="award" >Winner of the Internet of Things Module Programming Competition |</h6> 2017</li>
+							</ul>
+						</div>
+						<div class="col-sm-6">
+							<ul>
+								<li><h6 class="award" >Member of the Students to STEMettes Programme |</h6> 2016 -2017</li>
+								<li><h6 class="award" >The Sheppard Memorial Prize |</h6> 2016</li>
+								<li><h6 class="award" >University of Surrey's Advanced Ballet Team |</h6> 2015-2016 </li>
+								<li><h6 class="award" >Member of the Surrey’s Top Achievers Recognized and Supported Scheme |</h6> 2014-2018</li>
+								<li><h6 class="award" >National Honor Society Member |</h6> 2014</li>
+								<li><h6 class="award" >Dance Team Scholar Athlete |</h6> 2010-2014</li>
+								<li><h6 class="award" >Senior Service Award |</h6> 2014</li>
+								<li><h6 class="award" >American Association of University Women Technology Award |</h6> 2013</li>
+							</ul>
+						</div>
+					</div>
+			</section> 
+
+			<section class="section container-fluid" id="connect">
+					<h2 class="centeredTitle" >Let's Connect!</h2>
+					<p>I am always looking to meet and talk to new likeminded people. 
+					If you think we can work together or just want to talk, please get in touch!</p>
+					<a href="mailto:hollyboothroyd@hotmail.com" class="fa fa-envelope" target="_blank"></a>
+					<a href="https://www.linkedin.com/in/holly-boothroyd-68308012a/" class="fa fa-linkedin" target="_blank"></a>
+					<p id="subtext">Find out more:</p>
+					<a href="documents/CV.pdf" class="fa fa fa-file-text-o" target="_blank"></a>
+					<a href="https://www.instagram.com/herhelloworld/" class="fa fa-instagram" target="_blank"></a>
+					<a href="https://github.com/ObsidianSwan" class="fa fa-github" target="_blank"></a>
+			</section> 
+		
+		<script>
+			ScrollReveal().reveal('.section', {duration: 2750, mobile: true});
+		</script>
+	</body>
+</html>
