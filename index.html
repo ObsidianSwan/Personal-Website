@@ -63,20 +63,17 @@
 			letter-spacing: 0.2em;
 			font-family: 'Josefin Sans', sans-serif;
 			text-transform: uppercase;
+			font-size: calc(1.5em + 1vw);
 		}
 
 		.container-fluid {
-			padding-top: 7%;
+			padding-top: 5%;
 			padding-bottom: 5%;
 			padding-left: calc(10% + 4vw);
 			padding-right: calc(10% + 4vw);
 			height: 100%;
 		}
-
-		.container-fluid h2 {
-			font-size: calc(1.5em + 1vw);
-		}
-
+      
 		a {
 			text-decoration: none;
 			font-weight: bold;
@@ -316,8 +313,8 @@
 				</div>
 			</section>
 
-			<section class="section container-fluid" id="community">
-					<h2 class="centeredTitle" >Community Efforts</h2>
+			<section class="section" id="community">
+					<h2 class="centeredTitle">Community Efforts</h2>
 					<div class="section-contents">
 						<p>I actively engage with multiple organizations - <a href="https://www.surrey.ac.uk/" target="_blank">University of Surrey</a>,
 						<a href="https://www.microsoft.com/en-us/diversity/programs/digigirlz/default.aspx" target="_blank">DigiGirlz</a>, and
@@ -325,53 +322,39 @@
 						peers and related institutions.	My motivation is to empower others in finding their success whether it be my fellow Surrey students or by advocating for women in STEM.
 						My efforts focus on delivering career development opportunities, mentorship, and increasing student industrial awareness and engagement.
 						</p>
-
-						<div id="communityCarousel" class="carousel slide" data-ride="carousel">
-							<ol class="carousel-indicators">
-								<li data-target="#communityCarousel" data-slide-to="0" class="active"></li>
-								<li data-target="#communityCarousel" data-slide-to="1"></li>
-								<li data-target="#communityCarousel" data-slide-to="2"></li>
-								<li data-target="#communityCarousel" data-slide-to="3"></li>
-							</ol>
-							<div class="carousel-inner">
-								<div class="photocontainer carousel-item">
-									<img class="d-block h-85 w-85 " src="images/stempanel.jpg" alt="Stem Panel">
-									<div id="item" class="carousel-caption d-none d-md-block">
-										<span><h5>Defying the Odds: Women in STEM Panel</h5></span>
-										<p>As VP of the Computing Society, I organized a panel discussion about the challenges of being a woman in STEM and to provide advice for achieving success within the STEM industries. The panel offered a collection of perspectives from an international array of women whos roles ranged from engineer to Vice President from companies like <a href="https://www.amazon.co.uk/" target="_blank">Amazon,</a> <a href="https://www.goldmansachs.com/" target="_blank">Goldman Sachs,</a> and <a href="http://www.intecsea.com/" target="_blank">Intecsea</a></p>
-									</div>
-								</div>
-								<div class="photocontainer carousel-item">
-									<img class="d-block h-85 w-85 " src="images/digigirlz.png" alt="DigiGirlz">
-									<div id="item" class="carousel-caption d-none d-md-block">
-										<h5>DigiGirlz Volunteer</h5>
-										<p>Attended by over 150+ year 8 girls from a variety of local UK schools, I assisted the girls during the brainstorming and implementation phases of an accessibility hackathon, and provided presentation feedback and advice in anticipation of their project judging by Cindy Rose, the CEO of Microsoft UK.</p>
-									</div>
-								</div>
-								<div class="photocontainer carousel-item">
-									<img class="d-block h-85 w-85 " src="images/scratchjr.png" alt="Scratch JR">
-									<div id="item" class="carousel-caption d-none d-md-block">
-										<h5>Introduced Scratch Jr into a Montessori Preschool</h5>
-										<p>In an effort to counter the concept that STEM is "just for boys", I introduced Scratch JR into a local Montessori preschool's curriculum. The feedback from both the girls and parents was incredibly positive with one girl remarking the programming was her favorite bit!</p>
-									</div>
-								</div>
-								<div class="photocontainer carousel-item active">
-									<img class="d-block h-85 w-85 " src="images/courserep.jpg" alt="Course Rep">
-									<div id="item" class="carousel-caption d-none d-md-block">
-										<h5>Computing Course Representative</h5>
-										<p>Over four years, I actively championed the development and improvement of the department and wider university based on student feedback and personal observations. I worked collaboratively with the department to ensure a constructive solution was identified and implemented. For my efforts, I was awarded the Gold Course Representative Award.</p>
-									</div>
-								</div>
-
+						<div id="communityImages">
+							<div class="row">
+								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/techher.jpg" alt="TechHer speaking"></div>
+								<div class="col-sm-2 communityGreen"></div>
+								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/melindagates.jpg" alt="Melinda Gates group"></div>
+								<div class="col-sm-2 communityOrange"></div>
+								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/stempanel.jpg" alt="STEM panel group"></div>
+								<div class="col-sm-2 communityBlue"></div>
 							</div>
-							<a class="carousel-control-prev" href="#communityCarousel" role="button" data-slide="prev">
-								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								<span class="sr-only">Previous</span>
-							</a>
-							<a class="carousel-control-next" href="#communityCarousel" role="button" data-slide="next">
-								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-								<span class="sr-only">Next</span>
-							</a>
+							<div class="row">
+								<div class="col-sm-2 communityBlue"></div>
+								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/athena.jpg" alt="Athena hackathon talk"></div>
+								<div class="col-sm-2 communityPink"></div>
+								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/techpathways.jpg" alt="TechPathways speaking event"></div>
+								<div class="col-sm-2 communityGreen"></div>
+								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/digigirlz-group.png" alt="DigiGirlz group"></div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/digigirlz-technicalshowcase.jpg" alt="DigiGirlz technical showcase"></div>
+								<div class="col-sm-2 communityOrange"></div>
+								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/unite2030.jpg" alt="Unite 2030 group"></div>
+								<div class="col-sm-2 communityBlue"></div>
+								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/courserep.jpg" alt="Course representative prize"></div>
+								<div class="col-sm-2 communityPink"></div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2 communityPink"></div>
+								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/compsoc.jpg" alt="Computing society group photo"></div>
+								<div class="col-sm-2 communityGreen"></div>
+								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/scratchjr3.jpg" alt="ScratchJr in preschool"></div>
+								<div class="col-sm-2 communityOrange"></div>
+								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/digigirlz-judge.jpg" alt="DigiGirlz Judge"></div>
+							</div>
 						</div>
 					</div>
 			</section>
