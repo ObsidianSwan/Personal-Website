@@ -77,6 +77,19 @@ img {
 	font-weight: bold;
 }
 
+#asfeaturedin {
+	padding: 7% 0 5% 0;
+}
+
+#featureLogos {
+	margin: 0 2% 0 2%;
+}
+
+#featureLogos img{
+	margin: 0 0 0 0;
+	box-shadow: 0px 0px 0px 0px;
+}
+
 #connect {
 	text-align: center;
 }
@@ -96,11 +109,11 @@ img {
 	font-size: 2.5em;
 	margin-left: 10px;
 	margin-right: 10px;
-	color: #13a3b5;
+	color: #007485;
 }
 
 #connect a:hover {
-	color: #0e7987;
+	color: white;
 	text-decoration: none;
 }
 
