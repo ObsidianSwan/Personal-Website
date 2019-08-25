@@ -1,31 +1,31 @@
-img { 			
+img {
 	box-shadow: 0px 4px 10px 0px #70808c;
-}  
-
-.section:nth-child(2n) { 			
-	color: white;
-	background: #13a3b5; 
 }
 
-.section:nth-child(2n) a { 			
+.section:nth-child(2n) {
+	color: white;
+	background: #13a3b5;
+}
+
+.section:nth-child(2n) a {
 	color: white;
 }
 
-.section:nth-child(2n) a:hover { 			
+.section:nth-child(2n) a:hover {
 	color: white;
 	text-decoration: underline;
-}	
+}
 
-.modaltextlinks a { 			
+.modaltextlinks a {
 	color: white;
 }
 
-.modaltextlinks a:hover{ 			
+.modaltextlinks a:hover{
 	color: white;
 	text-decoration: underline;
-}		
+}
 
-.section:nth-child(2n) img { 			
+.section:nth-child(2n) img {
 	box-shadow: 0px 4px 10px 0px #0e7987;
 }
 
@@ -54,7 +54,7 @@ img {
 	border-radius: 10px;
 	width: 100%;
 	top:50%;
-	display: block; 
+	display: block;
 	margin: 0px auto;
 }
 
@@ -84,7 +84,7 @@ img {
 #connect p {
 	margin-botton: 5%;
 }
- 
+
 #connect #subtext {
 	margin: 3%;
 	text-transform: uppercase;
@@ -103,3 +103,28 @@ img {
 	color: #0e7987;
 	text-decoration: none;
 }
+
+#community {
+  padding: 5% 0 0 0;
+}
+
+#community p {
+  padding-left: calc(4vw + 10%);
+  padding-right: calc(4vw + 10%);
+}
+
+#community img {
+  box-shadow: 0 0 0 0;
+}
+
+#communityImages div {
+  padding: 0 0 0 0;
+}
+
+.communityOrange { background-color: #f4a24c; }
+
+.communityPink { background-color: #f26f77; }
+
+.communityBlue { background-color: #13a3b5; }
+
+.communityGreen { background-color: #a6d050; }
