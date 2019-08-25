@@ -77,10 +77,6 @@ img {
 	font-weight: bold;
 }
 
-#asfeaturedin {
-	padding: 7% 0 5% 0;
-}
-
 #featureLogos {
 	margin: 0 2% 0 2%;
 }
@@ -124,6 +120,7 @@ img {
 #community p {
   padding-left: calc(4vw + 10%);
   padding-right: calc(4vw + 10%);
+	padding-bottom: 2%;
 }
 
 #community img {
@@ -132,6 +129,7 @@ img {
 
 #communityImages div {
   padding: 0 0 0 0;
+	margin: 0;
 }
 
 .communityOrange { background-color: #f4a24c; }
