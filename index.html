@@ -55,18 +55,7 @@
 
 		}
 
-		h2, h4, .centeredSubTitles {
-			text-align: center;
-			padding-top: 20px;
-			padding-bottom: 10px;
-			font-weight: bold;
-			letter-spacing: 0.2em;
-			font-family: 'Josefin Sans', sans-serif;
-			text-transform: uppercase;
-			font-size: calc(1.5em + 1vw);
-		}
-
-		.centeredSubTitle {
+		h2, h4, .centeredTitle {
 			text-align: center;
 			padding-top: 10px;
 			padding-bottom: 5px;
@@ -74,8 +63,12 @@
 			letter-spacing: 0.2em;
 			font-family: 'Josefin Sans', sans-serif;
 			text-transform: uppercase;
-			font-size: 1.5em;
+			font-size: 2em;
+		}
 
+		.centeredSubTitle {
+			font-size: 1.5em;
+			padding-bottom: 0px;
 		}
 
 		.container-fluid {
@@ -113,6 +106,11 @@
 			letter-spacing: 0.2em;
 			text-align: center;
 			font-family: 'Josefin Sans', sans-serif;
+			margin: 2% 0% 0% 0%
+		}
+
+		.speakingitem {
+			margin: 0% 1% 0% 1%;
 		}
 
 		a {
@@ -352,7 +350,7 @@
 			<section class="section vertical-container-fluid" id="asfeaturedin">
 				<h2 class="centeredTitle">Featured in</h2>
 				<h4 class="centeredSubTitle">Press & Interviews</h4>
-				<div class="row vertical-container-fluid" id="featureLogos">
+				<div class="row vertical-container-fluid logoImage">
 					<div class="col-sm-2"><a href="https://shecancode.io/blog/how-can-you-futureproof-your-career" target="_blank"><img class="center-block img-fluid" src="images/featuredin/shecancode.png" alt="SheCanCode logo"></a></div>
 					<div class="col-sm-2"><a href="https://cloudblogs.microsoft.com/industry-blog/en-gb/beyourfuture/2019/11/12/secrets-skills-microsoft-uk-graduates/" target="_blank"><img class="center-block img-fluid" src="images/featuredin/microsoft.png" alt="Microsoft logo"/></a></div>
 				  <div class="col-sm-2"><a href="https://www.standard.co.uk/futurelondon/skills/3-women-from-code-first-girls-25-ones-to-watch-list-share-their-tips-on-tech-success-a4155966.html" target="_blank"><img class="center-block img-fluid" src="images/featuredin/eveningstandard.png" alt="Evening Standard logo"/></a></div>
@@ -361,7 +359,7 @@
 					<div class="col-sm-2"><a href="https://shecancode.io/blog/how-can-you-futureproof-your-career" target="_blank"><img class="center-block img-fluid" src="images/featuredin/wogrammer2.png" alt="Wogrammer logo"></a></div>
 					</div>
 				<h4 class="centeredSubTitle">Radio & Podcasts</h4>
-				<div class="row vertical-subcontainer-fluid" id="featureLogos">
+				<div class="row vertical-subcontainer-fluid logoImage">
 					<div class="col-sm-2"></div>
 					<div class="col-sm-2"></div>
 					<div class="col-sm-2"><a href="https://www.bbc.co.uk/sounds/play/p07h3lsv" target="_blank"><img class="center-block img-fluid" src="images/featuredin/bbcradio5.png" alt="bbc radio 5 live logo"></a></div>
@@ -420,72 +418,69 @@
 
 				<!-- Speaking 2020 -->
 				<h4 class="centeredSubTitle">2020</h4>
-				<div class="row vertical-container-fluid" id="featureLogos">
-					<div class="col-sm-3">
+				<div class="row vertical-subcontainer-fluid justify-content-center logoImage">
+					<div class="col-sm-2 speakingitem">
 						<a href="https://cloudblogs.microsoft.com/industry-blog/en-gb/beyourfuture/2019/11/12/secrets-skills-microsoft-uk-graduates/" target="_blank">
-							<img class="center-block img-fluid" src="images/speaking/pinklmf.png" alt="Likeminded Females logo"/>
+							<img class="center-block img-fluid" src="images/speaking/pinklmf.png" alt="Like Minded Females logo"/>
 							<p class="image-content-header">April | Like Minded Females</p>
-							<p class="image-content-body">Public Speaking Webinar</p>
-					</a>
+						</a>
+						<p class="image-content-body">Public Speaking Webinar</p>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-2 speakingitem">
 						<a href="https://stemettes.org/blog/2020/03/10/stemettes-turns-7/" target="_blank">
 							<img class="center-block img-fluid" src="images/speaking/stemettes.png" alt="STEMettes logo">
 							<p class="image-content-header">February | STEMettes</p>
-							<p class="image-content-body">7th Birthday Alumnae Panel</p>
-					</a>
+						</a>
+						<p class="image-content-body">7th Birthday Alumnae Panel</p>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-2 speakingitem">
 						<a href="https://www.eventbrite.co.uk/e/women-in-tech-myths-and-opportunities-tickets-90800255007#" target="_blank">
 							<img class="center-block img-fluid" src="images/speaking/shesayslondon.png" alt="SheSays logo"/>
 							<p class="image-content-header">February | SheSays London</p>
-							<p class="image-content-body">Myths and Opportunities in Tech Panel</p>
-					</a>
+						</a>
+						<p class="image-content-body">Myths and Opportunities in Tech Panel</p>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-2 speakingitem">
 						<a href="https://www.eventbrite.co.uk/e/power-up-futureproof-your-tech-career-for-2020-and-beyond-tickets-90769424793?aff=ebdssbdestsearch" target="_blank">
 							<img class="center-block img-fluid" src="images/speaking/shecancode.png" alt="SheCanCode logo"/>
 							<p class="image-content-header">February | SheCanCode</p>
-							<p class="image-content-body">Future Proof Your Career Panel</p>
-					</a>
+						</a>
+						<p class="image-content-body">Future Proof Your Career Panel</p>
 					</div>
 				</div>
 
 				<!-- Speaking 2019 -->
 				<h4 class="centeredSubTitle">2019</h4>
-				<div class="row vertical-container-fluid" id="featureLogos">
-					<div class="col-sm-3">
+				<div class="row vertical-subcontainer-fluid justify-content-center logoImage">
+					<div class="col-sm-2 speakingitem">
 						<a href="https://www.eventbrite.com/e/women-in-london-talk-tech-smart-cities-automation-dlt-cybersec-iot-tickets-74630346375#" target="_blank">
 							<img class="center-block img-fluid" src="images/speaking/womenintechrev.jpg" alt="ShowCode Athena logo"/>
 							<p class="image-content-header">November | Women in Tech Revolution</p>
-							<p class="image-content-body">Smart Cities Panel</p>
-					</a>
+						</a>
+						<p class="image-content-body">Smart Cities Panel</p>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-2 speakingitem">
 						<a href="https://www.eventbrite.co.uk/e/women-in-tech-meetup-at-quadrature-london-developing-your-career-in-tech-tickets-73429434415#" target="_blank">
 							<img class="center-block img-fluid" src="images/speaking/quadraturecaptial.png" alt="Quadrature Captial logo"/>
 							<p class="image-content-header">October | Quadrature Capital</p>
-							<p class="image-content-body">Technical Interviews & Early in Career Success Talk</p>
-					</a>
+						</a>
+						<p class="image-content-body">Technical Interviews & Early in Career Success Talk</p>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-2 speakingitem">
 						<a href="http://www.techher.uk/index.html" target="_blank">
 							<img class="center-block img-fluid" src="images/speaking/microsoft.png" alt="Microsoft logo"/>
 							<p class="image-content-header">June | Microsoft TechHer Conference</p>
-							<p class="image-content-body">Imposter Syndrome Talk</p>
-					</a>
+						</a>
+						<p class="image-content-body">Imposter Syndrome Talk</p>
 					</div>
-				</div>
-
-				<div class="row vertical-container-fluid" id="featureLogos">
-					<div class="col-sm-3">
+					<div class="col-sm-2 speakingitem">
 						<a href="https://www.athenaldn.com/copy-of-athena-hack" target="_blank">
 							<img class="center-block img-fluid" src="images/speaking/showcode.png" alt="ShowCode Athena logo"/>
 							<p class="image-content-header">April | ShowCode Athena Hackathon</p>
-							<p class="image-content-body">Tech for Good Panel</p>
 						</a>
+						<p class="image-content-body">Tech for Good Panel</p>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-2 speakingitem">
 						<img class="center-block img-fluid" src="images/speaking/microsoft.png" alt="Microsoft logo"/>
 						<p class="image-content-header">April | Microsoft TechPathways</p>
 						<p class="image-content-body">Women in Technology Talk</p>
@@ -495,61 +490,73 @@
 
 			<!-- Speaking 2018 -->
 			<h4 class="centeredSubTitle">2018</h4>
-			<div class="row vertical-subcontainer-fluid" id="featureLogos">
-				<div class="col-sm-3">
+			<div class="row vertical-subcontainer-fluid justify-content-center logoImage">
+				<div class="col-sm-2 speakingitem">
 					<img class="center-block img-fluid" src="images/speaking/surreyuni.png" alt="University of Surrey logo">
 					<p class="image-content-header">December - June | University of Surrey</p>
 					<p class="image-content-body">Computing Open Day Placement Talks</p>
 				</div>
+				<div class="col-sm-2 speakingitem">
+					<a href="https://www.facebook.com/events/512012082496848/" target="_blank">
+						<img class="center-block img-fluid" src="images/speaking/compsoc.jpg" alt="University of Surrey Computing Society logo">
+						<p class="image-content-header">November | Surrey Computing Society</p>
+					</a>
+					<p class="image-content-body">Women in STEM Panel Host & Organizer</p>
 				</div>
-			</section>
+				<div class="col-sm-2 speakingitem">
+					<img class="center-block img-fluid" src="images/speaking/issaquahhigh.jpg" alt="Issaquah High School logo">
+					<p class="image-content-header">April | Issaquah High School</p>
+					<p class="image-content-body">Studying Abroad in the UK Talk</p>
+				</div>
+			</div>
+		</section>
 
-			<section class="section container-fluid" id="recognition">
-					<h2 class="centeredTitle" >Recognition</h2>
-					<div class="row wide-gutter">
-						<div class="col-sm-6">
-							<ul>
-								<li><h6 class="award recognitionFourth" >TechWomen100 Award Winner |</h6> 2019</li>
-								<li><h6 class="award recognitionFirst" >Code First: Girls One to Watch |</h6> 2019</li>
-								<li><h6 class="award recognitionSecond" >Future Stars of Tech Developer Award Shortlist |</h6> 2019</li>
-								<li><h6 class="award recognitionThird" >Winner of the UNITE2030: Hack for the Planet Hackathon |</h6> 2018</li>
-								<li><h6 class="award recognitionFourth" >IBM Prize for Best Final Year Performance |</h6> 2018</li>
-								<li><h6 class="award recognitionFirst" >IBM Prize for Excellent Placement Year Performance |</h6> 2018</li>
-								<li><h6 class="award recognitionSecond" >BCS High Performing Graduate Professional Membership Award |</h6> 2018</li>
-								<li><h6 class="award recognitionThird" >Computing Society Gold STAR Award |</h6> 2018</li>
-								<li><h6 class="award recognitionFourth" >Gold Course Representative Award |</h6> 2018</li>
-								<li><h6 class="award recognitionFirst" >Best Placement Student of the Year for the Faculty of Engineering and Physical Science |</h6> 2018</li>
-							</ul>
-						</div>
-						<div class="col-sm-6">
-							<ul>
-								<li><h6 class="award recognitionSecond" >Winner of the Internet of Things Module Programming Competition |</h6> 2017</li>
-								<li><h6 class="award recognitionThird" >Member of the Students to STEMettes Programme |</h6> 2016 -2017</li>
-								<li><h6 class="award recognitionFourth" >The Sheppard Memorial Prize |</h6> 2016</li>
-								<li><h6 class="award recognitionFirst" >University of Surrey's Advanced Ballet Team |</h6> 2015-2016 </li>
-								<li><h6 class="award recognitionSecond" >Member of the Surrey’s Top Achievers Recognized and Supported Scheme |</h6> 2014-2018</li>
-								<li><h6 class="award recognitionThird" >National Honor Society Member |</h6> 2014</li>
-								<li><h6 class="award recognitionFourth" >Dance Team Scholar Athlete |</h6> 2010-2014</li>
-								<li><h6 class="award recognitionFirst" >Senior Service Award |</h6> 2014</li>
-								<li><h6 class="award recognitionSecond" >American Association of University Women Technology Award |</h6> 2013</li>
-							</ul>
-						</div>
+		<section class="section container-fluid" id="recognition">
+				<h2 class="centeredTitle" >Recognition</h2>
+				<div class="row wide-gutter">
+					<div class="col-sm-6">
+						<ul>
+							<li><h6 class="award recognitionFourth" >TechWomen100 Award Winner |</h6> 2019</li>
+							<li><h6 class="award recognitionFirst" >Code First: Girls One to Watch |</h6> 2019</li>
+							<li><h6 class="award recognitionSecond" >Future Stars of Tech Developer Award Shortlist |</h6> 2019</li>
+							<li><h6 class="award recognitionThird" >Winner of the UNITE2030: Hack for the Planet Hackathon |</h6> 2018</li>
+							<li><h6 class="award recognitionFourth" >IBM Prize for Best Final Year Performance |</h6> 2018</li>
+							<li><h6 class="award recognitionFirst" >IBM Prize for Excellent Placement Year Performance |</h6> 2018</li>
+							<li><h6 class="award recognitionSecond" >BCS High Performing Graduate Professional Membership Award |</h6> 2018</li>
+							<li><h6 class="award recognitionThird" >Computing Society Gold STAR Award |</h6> 2018</li>
+							<li><h6 class="award recognitionFourth" >Gold Course Representative Award |</h6> 2018</li>
+							<li><h6 class="award recognitionFirst" >Best Placement Student of the Year for the Faculty of Engineering and Physical Science |</h6> 2018</li>
+						</ul>
 					</div>
-			</section>
+					<div class="col-sm-6">
+						<ul>
+							<li><h6 class="award recognitionSecond" >Winner of the Internet of Things Module Programming Competition |</h6> 2017</li>
+							<li><h6 class="award recognitionThird" >Member of the Students to STEMettes Programme |</h6> 2016 -2017</li>
+							<li><h6 class="award recognitionFourth" >The Sheppard Memorial Prize |</h6> 2016</li>
+							<li><h6 class="award recognitionFirst" >University of Surrey's Advanced Ballet Team |</h6> 2015-2016 </li>
+							<li><h6 class="award recognitionSecond" >Member of the Surrey’s Top Achievers Recognized and Supported Scheme |</h6> 2014-2018</li>
+							<li><h6 class="award recognitionThird" >National Honor Society Member |</h6> 2014</li>
+							<li><h6 class="award recognitionFourth" >Dance Team Scholar Athlete |</h6> 2010-2014</li>
+							<li><h6 class="award recognitionFirst" >Senior Service Award |</h6> 2014</li>
+							<li><h6 class="award recognitionSecond" >American Association of University Women Technology Award |</h6> 2013</li>
+						</ul>
+					</div>
+				</div>
+		</section>
 
-			<section class="section container-fluid" id="connect">
-					<h2 class="centeredTitle" >Let's Connect!</h2>
-					<p>I am always looking to meet and talk to new likeminded people.
-					If you think we can work together or just want to talk, please get in touch!</p>
-					<a href="mailto:hollyboothroyd@hotmail.com" class="fa fa-envelope" target="_blank"></a>
-					<a href="https://www.linkedin.com/in/holly-boothroyd-68308012a/" class="fa fa-linkedin" target="_blank"></a>
-					<p id="subtext">Find out more:</p>
-					<a href="documents/CV.pdf" class="fa fa fa-file-text-o" target="_blank"></a>
-					<a href="https://medium.com/@hollyboothroyd" class="fa fa-medium" target="_blank"></a>
-					<a href="https://twitter.com/hollyboothroyd_" class="fa fa-twitter" target="_blank"></a>
-					<a href="https://www.instagram.com/herhelloworld/" class="fa fa-instagram" target="_blank"></a>
-					<a href="https://github.com/ObsidianSwan" class="fa fa-github" target="_blank"></a>
-			</section>
+		<section class="section container-fluid" id="connect">
+				<h2 class="centeredTitle" >Let's Connect!</h2>
+				<p>I am always looking to meet and talk to new likeminded people.
+				If you think we can work together or just want to talk, please get in touch!</p>
+				<a href="mailto:hollyboothroyd@hotmail.com" class="fa fa-envelope" target="_blank"></a>
+				<a href="https://www.linkedin.com/in/holly-boothroyd-68308012a/" class="fa fa-linkedin" target="_blank"></a>
+				<p id="subtext">Find out more:</p>
+				<a href="documents/CV.pdf" class="fa fa fa-file-text-o" target="_blank"></a>
+				<a href="https://medium.com/@hollyboothroyd" class="fa fa-medium" target="_blank"></a>
+				<a href="https://twitter.com/hollyboothroyd_" class="fa fa-twitter" target="_blank"></a>
+				<a href="https://www.instagram.com/herhelloworld/" class="fa fa-instagram" target="_blank"></a>
+				<a href="https://github.com/ObsidianSwan" class="fa fa-github" target="_blank"></a>
+		</section>
 
 		<script>
 			ScrollReveal().reveal('.section', {duration: 2750, mobile: true});
