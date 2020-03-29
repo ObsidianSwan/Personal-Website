@@ -66,12 +66,53 @@
 			font-size: calc(1.5em + 1vw);
 		}
 
+		.centeredSubTitle {
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 5px;
+			font-weight: bold;
+			letter-spacing: 0.2em;
+			font-family: 'Josefin Sans', sans-serif;
+			text-transform: uppercase;
+			font-size: 1.5em;
+
+		}
+
 		.container-fluid {
 			padding-top: 3%;
 			padding-bottom: 3%;
 			padding-left: calc(10% + 4vw);
 			padding-right: calc(10% + 4vw);
 			height: 100%;
+		}
+
+		.vertical-container-fluid {
+			padding-top: 3%;
+			padding-bottom: 3%;
+			height: 100%;
+		}
+
+		.vertical-subcontainer-fluid {
+			padding-top: 1.5%;
+			padding-bottom: 1.5%;
+			height: 100%;
+		}
+
+		.image-content-header {
+			font-size: .75em;
+			font-weight: bold;
+			text-align: center;
+			letter-spacing: 0.2em;
+			font-family: 'Josefin Sans', sans-serif;
+			text-transform: uppercase;
+			margin: 3% 0% 0% 0%
+		}
+
+		.image-content-body {
+			font-size: .65em;
+			letter-spacing: 0.2em;
+			text-align: center;
+			font-family: 'Josefin Sans', sans-serif;
 		}
 
 		a {
@@ -164,7 +205,7 @@
 			<section class="section container-fluid" id="home">
 					<div class="row" >
 						<div class="col-sm-6" style="padding-top:35px">
-							<img class="my-auto img-responsive w-75" id="selfportait" src="images/profile.jpeg" alt="profile">
+							<img class="my-auto img-responsive w-75" id="selfportait" src="images/title/profile.jpeg" alt="profile">
 						</div>
 						<div class="col-sm-6 my-auto float-right" style="padding-top:35px;" id="about">
 							<h2 class="centeredTitle" >{Hi, I'm Holly!}</h2>
@@ -288,7 +329,7 @@
 					<div class="col-sm-6">
 						<a onclick="showPerformanceAward()" data-toggle="modal" data-target="#imgModal">
 							<div class="photocontainer">
-								<img class="rounded img-fluid" id="bestoverall" src="images/bestoverall.jpg" alt="Best Overall">
+								<img class="rounded img-fluid" id="bestoverall" src="images/education/bestoverall.jpg" alt="Best Overall">
 								<div class="content">
 									<h6><b>IBM Prize for Best Performance & IBM Prize for Excellent Placement Year Performance</b></h6>
 								</div>
@@ -298,7 +339,7 @@
 					<div class="col-sm-6">
 						<a onclick="showPlacementAward()" data-toggle="modal" data-target="#imgModal">
 							<div class="photocontainer">
-								<img class="rounded img-fluid" id="placementaward" src="images/placementaward.png" alt="Placement Award">
+								<img class="rounded img-fluid" id="placementaward" src="images/education/placementaward.png" alt="Placement Award">
 								<div class="content">
 									<h6><b>Best Placement Student of the Year for the Faculty of Engineering and Physical Science</b></h6>
 								</div>
@@ -308,12 +349,25 @@
 				</div>
 			</section>
 
-			<section class="section container-fluid" id="asfeaturedin">
-				<h2 class="centeredTitle">Featured In</h2>
-				<div class="row" id="featureLogos">
-				  <div class="col-sm-4"><a href="https://www.standard.co.uk/futurelondon/skills/3-women-from-code-first-girls-25-ones-to-watch-list-share-their-tips-on-tech-success-a4155966.html" target="_blank"><img class="center-block img-fluid" src="images/eveningstandard.png" alt="evening standard logo"/></a></div>
-				  <div class="col-sm-4"><a href="https://www.surreystories.co.uk/stories/hollys-story/" target="_blank"><img class="center-block img-fluid" src="images/university-of-surrey-logo.png" alt="university of surrey logo"/></a></div>
-				  <div class="col-sm-4"><a href="https://www.bbc.co.uk/sounds/play/p07h3lsv" target="_blank"><img class="center-block img-fluid" src="images/bbc-radio-5-live-logo-png-transparent.png" alt="bbc radio 5 live logo"></a></div>
+			<section class="section vertical-container-fluid" id="asfeaturedin">
+				<h2 class="centeredTitle">Featured in</h2>
+				<h4 class="centeredSubTitle">Press & Interviews</h4>
+				<div class="row vertical-container-fluid" id="featureLogos">
+					<div class="col-sm-2"><a href="https://shecancode.io/blog/how-can-you-futureproof-your-career" target="_blank"><img class="center-block img-fluid" src="images/featuredin/shecancode.png" alt="SheCanCode logo"></a></div>
+					<div class="col-sm-2"><a href="https://cloudblogs.microsoft.com/industry-blog/en-gb/beyourfuture/2019/11/12/secrets-skills-microsoft-uk-graduates/" target="_blank"><img class="center-block img-fluid" src="images/featuredin/microsoft.png" alt="Microsoft logo"/></a></div>
+				  <div class="col-sm-2"><a href="https://www.standard.co.uk/futurelondon/skills/3-women-from-code-first-girls-25-ones-to-watch-list-share-their-tips-on-tech-success-a4155966.html" target="_blank"><img class="center-block img-fluid" src="images/featuredin/eveningstandard.png" alt="Evening Standard logo"/></a></div>
+					<div class="col-sm-2"><a href="https://www.surreystories.co.uk/stories/hollys-story/" target="_blank"><img class="center-block img-fluid" src="images/featuredin/surreyuni.png" alt="university of surrey logo"/></a></div>
+					<div class="col-sm-2"><a href="https://www.thestudentroom.co.uk/showthread.php?t=6149664" target="_blank"><img class="center-block img-fluid" src="images/featuredin/thestudentroom.png" alt="Student Room logo"/></a></div>
+					<div class="col-sm-2"><a href="https://shecancode.io/blog/how-can-you-futureproof-your-career" target="_blank"><img class="center-block img-fluid" src="images/featuredin/wogrammer2.png" alt="Wogrammer logo"></a></div>
+					</div>
+				<h4 class="centeredSubTitle">Radio & Podcasts</h4>
+				<div class="row vertical-subcontainer-fluid" id="featureLogos">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-2"><a href="https://www.bbc.co.uk/sounds/play/p07h3lsv" target="_blank"><img class="center-block img-fluid" src="images/featuredin/bbcradio5.png" alt="bbc radio 5 live logo"></a></div>
+					<div class="col-sm-2"><a href="https://www.bbc.co.uk/sounds/play/p07h3lsv" target="_blank"><img class="center-block img-fluid" src="images/featuredin/techtalks.jpg" alt="tech talks logo"></a></div>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-2"></div>
 				</div>
 			</section>
 
@@ -361,11 +415,101 @@
 					</div>
 			</section>
 
+			<section class="section vertical-container-fluid" id="speaking">
+				<h2 class="centeredTitle">Speaking</h2>
+
+				<!-- Speaking 2020 -->
+				<h4 class="centeredSubTitle">2020</h4>
+				<div class="row vertical-container-fluid" id="featureLogos">
+					<div class="col-sm-3">
+						<a href="https://cloudblogs.microsoft.com/industry-blog/en-gb/beyourfuture/2019/11/12/secrets-skills-microsoft-uk-graduates/" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/pinklmf.png" alt="Likeminded Females logo"/>
+							<p class="image-content-header">April | Like Minded Females</p>
+							<p class="image-content-body">Public Speaking Webinar</p>
+					</a>
+					</div>
+					<div class="col-sm-3">
+						<a href="https://stemettes.org/blog/2020/03/10/stemettes-turns-7/" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/stemettes.png" alt="STEMettes logo">
+							<p class="image-content-header">February | STEMettes</p>
+							<p class="image-content-body">7th Birthday Alumnae Panel</p>
+					</a>
+					</div>
+					<div class="col-sm-3">
+						<a href="https://www.eventbrite.co.uk/e/women-in-tech-myths-and-opportunities-tickets-90800255007#" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/shesayslondon.png" alt="SheSays logo"/>
+							<p class="image-content-header">February | SheSays London</p>
+							<p class="image-content-body">Myths and Opportunities in Tech Panel</p>
+					</a>
+					</div>
+					<div class="col-sm-3">
+						<a href="https://www.eventbrite.co.uk/e/power-up-futureproof-your-tech-career-for-2020-and-beyond-tickets-90769424793?aff=ebdssbdestsearch" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/shecancode.png" alt="SheCanCode logo"/>
+							<p class="image-content-header">February | SheCanCode</p>
+							<p class="image-content-body">Future Proof Your Career Panel</p>
+					</a>
+					</div>
+				</div>
+
+				<!-- Speaking 2019 -->
+				<h4 class="centeredSubTitle">2019</h4>
+				<div class="row vertical-container-fluid" id="featureLogos">
+					<div class="col-sm-3">
+						<a href="https://www.eventbrite.com/e/women-in-london-talk-tech-smart-cities-automation-dlt-cybersec-iot-tickets-74630346375#" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/womenintechrev.jpg" alt="ShowCode Athena logo"/>
+							<p class="image-content-header">November | Women in Tech Revolution</p>
+							<p class="image-content-body">Smart Cities Panel</p>
+					</a>
+					</div>
+					<div class="col-sm-3">
+						<a href="https://www.eventbrite.co.uk/e/women-in-tech-meetup-at-quadrature-london-developing-your-career-in-tech-tickets-73429434415#" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/quadraturecaptial.png" alt="Quadrature Captial logo"/>
+							<p class="image-content-header">October | Quadrature Capital</p>
+							<p class="image-content-body">Technical Interviews & Early in Career Success Talk</p>
+					</a>
+					</div>
+					<div class="col-sm-3">
+						<a href="http://www.techher.uk/index.html" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/microsoft.png" alt="Microsoft logo"/>
+							<p class="image-content-header">June | Microsoft TechHer Conference</p>
+							<p class="image-content-body">Imposter Syndrome Talk</p>
+					</a>
+					</div>
+				</div>
+
+				<div class="row vertical-container-fluid" id="featureLogos">
+					<div class="col-sm-3">
+						<a href="https://www.athenaldn.com/copy-of-athena-hack" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/showcode.png" alt="ShowCode Athena logo"/>
+							<p class="image-content-header">April | ShowCode Athena Hackathon</p>
+							<p class="image-content-body">Tech for Good Panel</p>
+						</a>
+					</div>
+					<div class="col-sm-3">
+						<img class="center-block img-fluid" src="images/speaking/microsoft.png" alt="Microsoft logo"/>
+						<p class="image-content-header">April | Microsoft TechPathways</p>
+						<p class="image-content-body">Women in Technology Talk</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Speaking 2018 -->
+			<h4 class="centeredSubTitle">2018</h4>
+			<div class="row vertical-subcontainer-fluid" id="featureLogos">
+				<div class="col-sm-3">
+					<img class="center-block img-fluid" src="images/speaking/surreyuni.png" alt="University of Surrey logo">
+					<p class="image-content-header">December - June | University of Surrey</p>
+					<p class="image-content-body">Computing Open Day Placement Talks</p>
+				</div>
+				</div>
+			</section>
+
 			<section class="section container-fluid" id="recognition">
 					<h2 class="centeredTitle" >Recognition</h2>
 					<div class="row wide-gutter">
 						<div class="col-sm-6">
 							<ul>
+								<li><h6 class="award recognitionFourth" >TechWomen100 Award Winner |</h6> 2019</li>
 								<li><h6 class="award recognitionFirst" >Code First: Girls One to Watch |</h6> 2019</li>
 								<li><h6 class="award recognitionSecond" >Future Stars of Tech Developer Award Shortlist |</h6> 2019</li>
 								<li><h6 class="award recognitionThird" >Winner of the UNITE2030: Hack for the Planet Hackathon |</h6> 2018</li>
