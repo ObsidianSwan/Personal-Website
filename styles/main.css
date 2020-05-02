@@ -113,23 +113,36 @@ img {
 	text-decoration: none;
 }
 
-#community {
-  padding: 3% 0 0 0;
-}
-
-#community p {
-  padding-left: calc(4vw + 10%);
-  padding-right: calc(4vw + 10%);
-	padding-bottom: 2%;
-}
-
 #community img {
   box-shadow: 0 0 0 0;
 }
 
 #communityImages div {
-  padding: 0 0 0 0;
+  padding: 0;
 	margin: 0;
+}
+
+#graduate p {
+	text-align: center;
+}
+
+#herhelloworld h4{
+  padding-left: calc(4vw + 5%);
+  padding-right: calc(4vw + 5%);
+}
+
+#herhelloworld .centeredTitle{
+	text-transform: none;
+}
+
+.wide-section {
+  padding: 3% 0 0 0;
+}
+
+.wide-section p {
+  padding-left: calc(4vw + 10%);
+  padding-right: calc(4vw + 10%);
+	text-align: center;
 }
 
 .communityOrange { background-color: #f4a24c; }
