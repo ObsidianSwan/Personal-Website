@@ -52,10 +52,6 @@ img {
 
 #selfportait {
 	border-radius: 10px;
-	width: 100%;
-	top:50%;
-	display: block;
-	margin: 0px auto;
 }
 
 #developer p {
@@ -113,8 +109,28 @@ img {
 	text-decoration: none;
 }
 
+#community p{
+	padding-bottom: 3%;
+	padding-left: 4%;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+#community ul {
+	list-style-type: none;
+	text-align: center;
+	font-weight: bold;
+	padding: 1% 0 0 0;
+}
+
 #community img {
   box-shadow: 0 0 0 0;
+}
+
+#community .centeredTitle {
+  padding-top: calc(3% + 10px);
+	padding-bottom: 3%;
+	padding-left: 4%;
 }
 
 #communityImages div {
@@ -126,7 +142,18 @@ img {
 	text-align: center;
 }
 
+#herhelloworld{
+	padding-bottom: 0;
+	text-align: center;
+}
+
 #herhelloworld h4{
+  padding-left: calc(4vw + 5%);
+  padding-right: calc(4vw + 5%);
+	padding-bottom: 3%;
+}
+
+#herhelloworld p{
   padding-left: calc(4vw + 5%);
   padding-right: calc(4vw + 5%);
 }
@@ -140,9 +167,13 @@ img {
 }
 
 .wide-section p {
-  padding-left: calc(4vw + 10%);
-  padding-right: calc(4vw + 10%);
+  padding-left: calc(4vw + 5%);
+  padding-right: calc(4vw + 5%);
 	text-align: center;
+}
+
+.container-buffer{
+	padding: 3%;
 }
 
 .communityOrange { background-color: #f4a24c; }

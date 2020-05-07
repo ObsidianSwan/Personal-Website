@@ -79,7 +79,7 @@
 	/* Timeline item content */
 	.main-timeline .timeline-content{
 		width: 50%;
-		padding-right: 15%;
+		padding: 0 15% 0 10%;
 	}
 	.main-timeline .icon{
 		float: left;
@@ -127,7 +127,7 @@
 	}
 	.main-timeline .timeline:nth-child(2n) .timeline-content{
 		float: right;
-		padding: 0 0 0 15%;
+		padding: 0 10% 0 15%;
 	}
 	.main-timeline .timeline:nth-child(2n) .description{ padding-left: 20px; }
 	.main-timeline .timeline:nth-child(2n) .year{
