@@ -33,6 +33,8 @@
 		left: 0;
 		right: 0;
 	}
+
+	/* Rounded ends of timeline */
 	.main-timeline .timeline:first-child:before{
 		height: 100%;
 		border-radius: 10px 10px 0 0;
@@ -42,6 +44,8 @@
 		height: 150%;
 		border-radius: 0 0 10px 10px;
 	}
+
+	/* Timeline item marker */
 	.main-timeline .timeline-icon{
 		display: block;
 		width: calc(35px + .6vw);
@@ -71,9 +75,11 @@
 		left: -33px;
 		bottom: 0;
 	}
+
+	/* Timeline item content */
 	.main-timeline .timeline-content{
 		width: 50%;
-		padding-right: 15%;
+		padding: 0 15% 0 10%;
 	}
 	.main-timeline .icon{
 		float: left;
@@ -94,6 +100,7 @@
 		font-size: calc(7px + .6vw);
 	}
 
+	/* Timeline item year tab */
 	.main-timeline .year{
 		width: 51%;
 		padding-left: 10px;
@@ -104,7 +111,7 @@
 	}
 	.main-timeline .year span{
 		display: inline-block;
-		padding: 6px 25px 6px 25px;
+		padding: 6px 25px 6px 35px;
 		background: #f4a24c;
 		border-radius: 0 50px 50px 0;
 		font-size: calc(10px + .3vw);
@@ -120,7 +127,7 @@
 	}
 	.main-timeline .timeline:nth-child(2n) .timeline-content{
 		float: right;
-		padding: 0 0 0 15%;
+		padding: 0 10% 0 15%;
 	}
 	.main-timeline .timeline:nth-child(2n) .description{ padding-left: 20px; }
 	.main-timeline .timeline:nth-child(2n) .year{
@@ -130,7 +137,12 @@
 		left: 0;
 	}
 
-	.main-timeline .timeline.second .year span{ border-radius: 50px 0 0 50px; }
+	.main-timeline .timeline:nth-child(2n) .year span{
+		border-radius: 50px 0 0 50px;
+		padding: 6px 35px 6px 25px;
+	}
+
+
 	.main-timeline .timeline.second .timeline-icon{ border-color: #f26f77; }
 	.main-timeline .timeline.second .icon{ color: #f26f77; }
 	.main-timeline .timeline.second:before,
@@ -142,7 +154,6 @@
 	.main-timeline .timeline.third:before,
 	.main-timeline .timeline.third .year span{ background: #13a3b5; }
 
-	.main-timeline .timeline.fourth .year span{ border-radius: 50px 0 0 50px; }
 	.main-timeline .timeline.fourth .timeline-icon{ border-color: #a6d050; }
 	.main-timeline .timeline.fourth .timeline-icon:before{ border-left-color: #a6d050; }
 	.main-timeline .timeline.fourth .icon{ color: #a6d050; }

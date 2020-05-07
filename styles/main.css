@@ -52,10 +52,6 @@ img {
 
 #selfportait {
 	border-radius: 10px;
-	width: 100%;
-	top:50%;
-	display: block;
-	margin: 0px auto;
 }
 
 #developer p {
@@ -77,11 +73,11 @@ img {
 	font-weight: bold;
 }
 
-#featureLogos {
+.logoImage {
 	margin: 0 2% 0 2%;
 }
 
-#featureLogos img{
+.logoImage img{
 	margin: 0 0 0 0;
 	box-shadow: 0px 0px 0px 0px;
 }
@@ -113,23 +109,71 @@ img {
 	text-decoration: none;
 }
 
-#community {
-  padding: 5% 0 0 0;
+#community p{
+	padding-bottom: 3%;
+	padding-left: 4%;
+	margin-bottom: 0;
+	text-align: center;
 }
 
-#community p {
-  padding-left: calc(4vw + 10%);
-  padding-right: calc(4vw + 10%);
-	padding-bottom: 2%;
+#community ul {
+	list-style-type: none;
+	text-align: center;
+	font-weight: bold;
+	padding: 1% 0 0 0;
 }
 
 #community img {
   box-shadow: 0 0 0 0;
 }
 
+#community .centeredTitle {
+  padding-top: calc(3% + 10px);
+	padding-bottom: 3%;
+	padding-left: 4%;
+}
+
 #communityImages div {
-  padding: 0 0 0 0;
+  padding: 0;
 	margin: 0;
+}
+
+#graduate p {
+	text-align: center;
+}
+
+#herhelloworld{
+	padding-bottom: 0;
+	text-align: center;
+}
+
+#herhelloworld h4{
+  padding-left: calc(4vw + 5%);
+  padding-right: calc(4vw + 5%);
+	padding-bottom: 3%;
+}
+
+#herhelloworld p{
+  padding-left: calc(4vw + 5%);
+  padding-right: calc(4vw + 5%);
+}
+
+#herhelloworld .centeredTitle{
+	text-transform: none;
+}
+
+.wide-section {
+  padding: 3% 0 0 0;
+}
+
+.wide-section p {
+  padding-left: calc(4vw + 5%);
+  padding-right: calc(4vw + 5%);
+	text-align: center;
+}
+
+.container-buffer{
+	padding: 3%;
 }
 
 .communityOrange { background-color: #f4a24c; }

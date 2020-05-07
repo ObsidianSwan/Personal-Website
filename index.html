@@ -19,15 +19,13 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
 		integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="jquery.fullpage.css" />
-
+		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
 		<script type="text/javascript" src="fullpage/vendors/scrolloverflow.min.js"></script>
 
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/scrollreveal"></script>
 
 		<script>
 			function showPerformanceAward() {
@@ -52,26 +50,94 @@
 		  font-family: 'Roboto', sans-serif;
 		  color: #1d2124;
 		  height: 100%;
-
+			overflow-x: hidden;
 		}
 
-		h2, h4, .centeredSubTitles {
+		h2, h4, .centeredTitle {
 			text-align: center;
-			padding-top: 20px;
-			padding-bottom: 10px;
+			padding-top: 10px;
+			padding-bottom: 5px;
 			font-weight: bold;
 			letter-spacing: 0.2em;
 			font-family: 'Josefin Sans', sans-serif;
 			text-transform: uppercase;
-			font-size: calc(1.5em + 1vw);
+		}
+
+		.centeredTitle {
+			font-size: 2em;
+		}
+
+		.centeredSubTitle {
+			font-size: 1.5em;
+			padding-bottom: 0px;
+			text-align: center;
+			text-transform: none;
 		}
 
 		.container-fluid {
 			padding-top: 3%;
 			padding-bottom: 3%;
-			padding-left: calc(10% + 4vw);
-			padding-right: calc(10% + 4vw);
+			padding-left: calc(5% + 4vw);
+			padding-right: calc(5% + 4vw);
 			height: 100%;
+		}
+
+		.vertical-container-fluid {
+			padding-top: 3%;
+			padding-bottom: 3%;
+			height: 100%;
+		}
+
+		.vertical-subcontainer-fluid {
+			padding-top: 1.5%;
+			padding-bottom: 1.5%;
+			height: 100%;
+		}
+
+		.image-content-header {
+			font-size: .75em;
+			font-weight: bold;
+			text-align: center;
+			letter-spacing: 0.2em;
+			font-family: 'Josefin Sans', sans-serif;
+			text-transform: uppercase;
+			margin-top: 3%;
+		}
+
+		.image-content-body {
+			font-size: .65em;
+			letter-spacing: 0.2em;
+			text-align: center;
+			font-family: 'Josefin Sans', sans-serif;
+			margin-top: 2%;
+		}
+
+		.speakingitem {
+			margin: 0% 1% 0% 1%;
+		}
+
+		.externalLinkButton {
+			background-color: black;
+			border-color: black;
+			margin-top: 1%;
+		}
+
+		.externalLinkButton:hover{
+			background-color: #f26f77;
+			border-color: #f26f77;
+		}
+
+		.externalLinkColorButton
+		{
+			background-color: #f26f77;
+			border-color: #f26f77;
+			margin: 1% 0 2% 0;
+		}
+
+		.externalLinkColorButton:hover{
+			background-color: black;
+			border-color: black;
+			text-decoration: none;
 		}
 
 		a {
@@ -132,7 +198,23 @@
 		  .modal-dialog-centered {
 			min-height:calc(100% - (1.75rem * 2));
 		  }
-}
+
+			.vertical-center-container
+			{
+				display: flex;
+				align-items: center; /* center vertical */
+			}
+		}
+
+		@media (min-width: 960px) {
+			}
+
+			.lg-vertical-center-container
+			{
+				display: flex;
+				align-items: center; /* center vertical */
+			}
+		}
 
 		</style>
 
@@ -162,32 +244,34 @@
 
 		<!-- Core Content -->
 			<section class="section container-fluid" id="home">
-					<div class="row" >
-						<div class="col-sm-6" style="padding-top:35px">
-							<img class="my-auto img-responsive w-75" id="selfportait" src="images/profile.jpeg" alt="profile">
+					<div class="row">
+						<div class="col-sm-6 vertical-center-container container-buffer">
+							<img class="w-75" id="selfportait" src="images/title/profile.jpeg" alt="profile">
 						</div>
-						<div class="col-sm-6 my-auto float-right" style="padding-top:35px;" id="about">
-							<h2 class="centeredTitle" >{Hi, I'm Holly!}</h2>
-							<br/>
-							<p>I am a passionate developer with a keen interest in the latest technologies.
-							With experience working on multiple robust globally released products, I strive to create
-							impact on others lives to be more creative, productive, and fun.
-							<br/>
-							<br/>
-							Along with my development work, I actively support diversity and inclusion in the technology
-							industry through various community events and organizations.
+						<div class="col-sm-6 vertical-center-container container-buffer" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" id="about">
+							<div class="vertical-center-text">
+								<h2 class="centeredTitle" >{Hi, I'm Holly!}</h2>
+								<br/>
+								<p>I am a passionate developer with a keen interest in the latest technologies.
+								With experience working on multiple robust globally released products, I strive to create
+								impact on others lives to be more creative, productive, and fun.
+								<br/>
+								<br/>
+								Along with my development work, I actively support diversity and inclusion in the technology
+								industry through various community events and organizations.
+							</div>
 						</div>
 					</div>
 			</section>
 
-			<section class="section container-fluid" id="experience">
+			<section class="section container-fluid px-0" id="experience">
 					<h2 class="centeredTitle" >Experience</h2>
 					<div class="row">
 						<div class="col-md-12">
 							<div class="main-timeline">
 								<div class="timeline">
 									<span class="timeline-icon"></span>
-									<div class="timeline-content">
+									<div class="timeline-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
 										<i class="icon fa fa-windows"></i>
 										<p class="description">
 											<h5><a href="https://www.microsoft.com/en-gb/windows/cortana" target="_blank">Software Engineer | Cortana</a></h5>
@@ -198,7 +282,7 @@
 								</div>
 								<div class="timeline second">
 									<span class="timeline-icon"></span>
-									<div class="timeline-content">
+									<div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
 										<i class="icon fa fa-desktop"></i>
 										<p class="description">
 											<h5><a href="https://www.facebook.com/ComputingSoc/" target="_blank">VP of the Computing Society</a></h5>
@@ -209,7 +293,7 @@
 								</div>
 								<div class="timeline third">
 									<span class="timeline-icon"></span>
-									<div class="timeline-content">
+									<div class="timeline-content XboxTimelineContent" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" id="">
 										<i class="icon fa fa-windows"></i>
 										<p class="description">
 											<h5><a href="https://www.xbox.com/" target="_blank">Software Engineering Intern | Xbox</a></h5>
@@ -220,7 +304,7 @@
 								</div>
 								<div class="timeline fourth">
 									<span class="timeline-icon"></span>
-									<div class="timeline-content">
+									<div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" data-aos-achor=".XboxTimelineContent">
 										<i class="icon fa fa-windows"></i>
 										<p class="description">
 											<h5><a href="https://www.microsoft.com/en-gb/p/paint-3d/9nblggh5fv99?activetab=pivot:overviewtab" target="_blank">Software Engineering Intern | Paint 3D</a></h5>
@@ -231,7 +315,7 @@
 								</div>
 								<div class="timeline">
 									<span class="timeline-icon"></span>
-									<div class="timeline-content">
+									<div class="timeline-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
 										<i class="icon fa fa-globe"></i>
 										<p class="description">
 											<h5><a href="http://blogs.surrey.ac.uk/usablog/author/hb00191/" target="_blank">International Student Ambassador</a></h5>
@@ -242,10 +326,10 @@
 								</div>
 								<div class="timeline second">
 									<span class="timeline-icon"></span>
-									<div class="timeline-content">
+									<div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
 										<i class="icon fa fa-group"></i>
 										<p class="description">
-											<h5>Computer Science Applicant Day Presenter</h5>
+											<h5><b>Computer Science Applicant Day Presenter</b></h5>
 											<h6>University of Surrey - Guildford, England</h6>
 										</p>
 									</div>
@@ -253,10 +337,10 @@
 								</div>
 								<div class="timeline third">
 									<span class="timeline-icon"></span>
-									<div class="timeline-content">
+									<div class="timeline-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
 										<i class="icon fa fa-desktop"></i>
 										<p class="description">
-											<h5>Computer Science Lab Demonstrator</h5>
+											<h5><b>Computer Science Lab Demonstrator</b></h5>
 											<h6>University of Surrey - Guildford, England</h6>
 										</p>
 									</div>
@@ -267,28 +351,29 @@
 					</div>
 					<div class="row text-center">
 						<div class="col-12">
-							<a class="btn btn-primary" style="background-color: black" href="https://www.linkedin.com/in/holly-boothroyd-68308012a/" target="_blank">Learn More</a>
+							<a class="btn btn-primary externalLinkButton" href="https://www.linkedin.com/in/holly-boothroyd-68308012a/" target="_blank">Learn More</a>
 						</div>
 					</div>
 			</section>
 
 			<section class="section container-fluid" id="graduate">
-				<h2 class="centeredTitle" >A University of Surrey Graduate</h2>
-				<p>I earned a first-class BSc(Hons) degree in
-				<a href="https://www.surrey.ac.uk/undergraduate/computing-and-information-technology" target="_blank">Computing and Information technology</a>
-				where I learnt primarily computer science topics supplemented with business management, finance, and entrepreneurship modules. I was honored to be awarded the "IBM Prize for Best Final Year Performance".
-				</br>
-				</br>
-				As a part of my studies, I completed an industrial placement year at Microsoft as a software engineer working on <a href="https://www.lift.london/" target="_blank">Paint 3D in London.</a>
-				This led to the opportunity to work on the Xbox team at Microsoft's HQ in Redmond, WA for a period of three months. I was incredibly
-				fortunate to work on both of these teams from whom <a href="http://blogs.surrey.ac.uk/careers/2018/04/10/my-professional-training-year-holly-boothroyd-microsoft/" target="_blank">I learnt so much from</a>.
-				</p>
-
+				<div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="175" data-aos-once="true">
+					<h2 class="centeredTitle" >A University of Surrey Graduate</h2>
+					<p>I earned a first-class BSc(Hons) degree in
+					<a href="https://www.surrey.ac.uk/undergraduate/computing-and-information-technology" target="_blank">Computing and Information technology</a>
+					where I learnt primarily computer science topics supplemented with business management, finance, and entrepreneurship modules. I was honored to be awarded the "IBM Prize for Best Final Year Performance".
+					</br>
+					</br>
+					As a part of my studies, I completed an industrial placement year at Microsoft as a software engineer working on <a href="https://www.lift.london/" target="_blank">Paint 3D in London.</a>
+					This led to the opportunity to work on the Xbox team at Microsoft's HQ in Redmond, WA for a period of three months. I was incredibly
+					fortunate to work on both of these teams from whom <a href="http://blogs.surrey.ac.uk/careers/2018/04/10/my-professional-training-year-holly-boothroyd-microsoft/" target="_blank">I learnt so much</a>.
+					</p>
+				</div>
 				<div class="row" style="padding-top:3%">
 					<div class="col-sm-6">
 						<a onclick="showPerformanceAward()" data-toggle="modal" data-target="#imgModal">
 							<div class="photocontainer">
-								<img class="rounded img-fluid" id="bestoverall" src="images/bestoverall.jpg" alt="Best Overall">
+								<img class="rounded img-fluid" id="bestoverall" src="images/education/bestoverall.jpg" alt="Best Overall">
 								<div class="content">
 									<h6><b>IBM Prize for Best Performance & IBM Prize for Excellent Placement Year Performance</b></h6>
 								</div>
@@ -298,7 +383,7 @@
 					<div class="col-sm-6">
 						<a onclick="showPlacementAward()" data-toggle="modal" data-target="#imgModal">
 							<div class="photocontainer">
-								<img class="rounded img-fluid" id="placementaward" src="images/placementaward.png" alt="Placement Award">
+								<img class="rounded img-fluid" id="placementaward" src="images/education/placementaward.png" alt="Placement Award">
 								<div class="content">
 									<h6><b>Best Placement Student of the Year for the Faculty of Engineering and Physical Science</b></h6>
 								</div>
@@ -308,107 +393,491 @@
 				</div>
 			</section>
 
-			<section class="section container-fluid" id="asfeaturedin">
-				<h2 class="centeredTitle">Featured In</h2>
-				<div class="row" id="featureLogos">
-				  <div class="col-sm-4"><a href="https://www.standard.co.uk/futurelondon/skills/3-women-from-code-first-girls-25-ones-to-watch-list-share-their-tips-on-tech-success-a4155966.html" target="_blank"><img class="center-block img-fluid" src="images/eveningstandard.png" alt="evening standard logo"/></a></div>
-				  <div class="col-sm-4"><a href="https://www.surreystories.co.uk/stories/hollys-story/" target="_blank"><img class="center-block img-fluid" src="images/university-of-surrey-logo.png" alt="university of surrey logo"/></a></div>
-				  <div class="col-sm-4"><a href="https://www.bbc.co.uk/sounds/play/p07h3lsv" target="_blank"><img class="center-block img-fluid" src="images/bbc-radio-5-live-logo-png-transparent.png" alt="bbc radio 5 live logo"></a></div>
+			<section class="section container-fluid px-3" id="featuredin">
+				<h2 class="centeredTitle">Featured in</h2>
+				<h4 class="centeredSubTitle">Press & Interviews</h4>
+				<div class="row vertical-container-fluid logoImage" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+					<div class="col-sm-2">
+						<a href="https://shecancode.io/blog/how-can-you-futureproof-your-career" target="_blank"><img class="center-block img-fluid" src="images/featuredin/shecancode.png" alt="SheCanCode logo"></a>
+						<p class="image-content-body">What can you do to futureproof your career? | <i>Feb 2020</i> </p>
+					</div>
+					<div class="col-sm-2">
+						<a href="https://cloudblogs.microsoft.com/industry-blog/en-gb/beyourfuture/2019/11/12/secrets-skills-microsoft-uk-graduates/" target="_blank"><img class="center-block img-fluid" src="images/featuredin/microsoft.png" alt="Microsoft logo"/></a>
+						<p class="image-content-body">Secrets and skills: Behind the scenes with Microsoft UK graduates | <i>Nov 2019</i> </p>
+					</div>
+				  <div class="col-sm-2">
+						<a href="https://www.standard.co.uk/futurelondon/skills/3-women-from-code-first-girls-25-ones-to-watch-list-share-their-tips-on-tech-success-a4155966.html" target="_blank"><img class="center-block img-fluid" src="images/featuredin/eveningstandard.png" alt="Evening Standard logo"/></a>
+						<p class="image-content-body">3 women from Code First: Girls 25 'ones to watch' list share their tips for tech success | <i>May 2019</i> </p>
+					</div>
+					<div class="col-sm-2">
+						<a href="https://www.surreystories.co.uk/stories/hollys-story/" target="_blank"><img class="center-block img-fluid" src="images/featuredin/surreyuni.png" alt="university of surrey logo"/></a>
+						<p class="image-content-body">Surrey Stories - Holly's Story | <i>Sept 2019</i> </p>
+					</div>
+					<div class="col-sm-2">
+						<a href="https://www.thestudentroom.co.uk/showthread.php?t=6149664" target="_blank"><img class="center-block img-fluid" src="images/featuredin/thestudentroom.png" alt="Student Room logo"/></a>
+						<p class="image-content-body">I'm a Microsoft Software Engineer - I've worked on Xbox, Paint 3D and now Cortana: AMA | <i>Oct 2020</i> </p>
+					</div>
+					<div class="col-sm-2">
+						<a href="https://shecancode.io/blog/how-can-you-futureproof-your-career" target="_blank"><img class="center-block img-fluid" src="images/featuredin/wogrammer2.png" alt="Wogrammer logo"></a>
+						<p class="image-content-body">What can you do to futureproof your career? | <i>May 2020 </i></p>
+					</div>
+				</div>
+				<h4 class="centeredSubTitle">Radio & Podcasts</h4>
+				<div class="row vertical-subcontainer-fluid logoImage" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="300" data-aos-delay="100" data-aos-once="true">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-2">
+						<a href="https://www.bbc.co.uk/sounds/play/p07h3lsv" target="_blank"><img class="center-block img-fluid" src="images/featuredin/bbcradio5.png" alt="bbc radio 5 live logo"></a>
+						<p class="image-content-body">An audience with Melinda Gates: Empowerment, careers, and society | <i>July 2019</i> </p>
+					</div>
+					<div class="col-sm-2">
+						<a href="https://www.tech-talks.co.uk/podcasts/holly-boothroyd" target="_blank"><img class="center-block img-fluid" src="images/featuredin/techtalks.jpg" alt="tech talks logo"></a>
+						<p class="image-content-body">TechTalks featured podcast with Holly Boothroyd, HerHelloWorld Founder | <i>Apr 2020</i> </p>
+					</div>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-2"></div>
 				</div>
 			</section>
 
-			<section class="section" id="community">
-					<h2 class="centeredTitle">Community Efforts</h2>
-					<div class="section-contents">
-						<p>Through creating events, public speaking, and leading community groups, I work to support the growth of my peers and related institutions.
-						My motivation is to empower others in achieving their success whether it be my fellow Microsoft employees, students, future technologists, or by advocating for women in STEM.
-						My efforts focus on delivering career development opportunities, mentorship, and increasing industrial engagement.
-						</p>
-						<div id="communityImages">
-							<div class="row">
-								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/techher.jpg" alt="TechHer speaking"></div>
-								<div class="col-sm-2 communityPink"></div>
-								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/melindagates.jpg" alt="Melinda Gates group"></div>
-								<div class="col-sm-2 communityOrange"></div>
-								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/stempanel.jpg" alt="STEM panel group"></div>
-								<div class="col-sm-2 communityGreen"></div>
+			<section class="section container-fluid p-0" id="community">
+				<div class="row">
+						<div class="col-lg-6 lg-vertical-center-container" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="275" data-aos-once="true" id="community-content">
+							<div>
+								<h2 class="centeredTitle">In The Community</h2>
+								<p>
+									Through creating events, public speaking, leading community groups, & advocating for women in STEM, I strive to support the growth of my peers and related institutions.
+									My motivation is to empower others to achieve success & fulfillment whether it be fellow employees, students, or future technologists.
+								</p>
+								<p>
+									My efforts focus on career development opportunities, mentorship, and industrial engagement.
+								</p>
+								<p>
+									Recent roles:
+									<ul>
+										<li>Technical Women @ Microsoft Board Member</li>
+										<li>Student to STEMette Mentor</li>
+										<li>Microsoft DigiGirlz London TechFair Organizer</li>
+									</ul>
+								</p>
 							</div>
+						</div>
+						<div class="col-lg-6" id="communityImages">
+
 							<div class="row">
-								<div class="col-sm-2 communityOrange"></div>
-								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/athena.jpg" alt="Athena hackathon talk"></div>
-								<div class="col-sm-2 communityGreen"></div>
-								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/techpathways.jpg" alt="TechPathways speaking event"></div>
-								<div class="col-sm-2 communityBlue"></div>
-								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/digigirlz-group.png" alt="DigiGirlz group"></div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/techher.jpg" alt="TechHer speaking">
+												<div class="content">
+													<h6><b>Spoke about Imposter Syndrome at Microsoft's TechHer Conference | 2019</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityPink"></div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/melindagates.jpg" alt="Melinda Gates group">
+												<div class="content">
+													<h6><b>Invited guest at the BBC Radio 5 Live Melinda Gates interview | 2019</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityGreen"></div>
+									</div>
+								</div>
 							</div>
+
 							<div class="row">
-								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/digigirlz-technicalshowcase.jpg" alt="DigiGirlz technical showcase"></div>
-								<div class="col-sm-2 communityBlue"></div>
-								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/unite2030.jpg" alt="Unite 2030 group"></div>
-								<div class="col-sm-2 communityPink"></div>
-								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/courserep.jpg" alt="Course representative prize"></div>
-								<div class="col-sm-2 communityOrange"></div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityOrange"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/lydia-graduation.jpeg" alt="Student to STEMettes graduation">
+												<div class="content">
+													<h6><b>Mentor in the Student to STEMettes mentorship program | 2019</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityBlue"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/asini.jpg" alt="Microsoft mentee and I">
+												<div class="content">
+													<h6><b>Mentor to Microsoft early-in-career employees | 2019-20</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
+
 							<div class="row">
-								<div class="col-sm-2 communityPink"></div>
-								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/compsoc.jpg" alt="Computing society group photo"></div>
-								<div class="col-sm-2 communityOrange"></div>
-								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/scratchjr3.jpg" alt="ScratchJr in preschool"></div>
-								<div class="col-sm-2 communityGreen"></div>
-								<div class="col-sm-2"><img class="img-fluid" id="bestoverall" src="images/community/3x2/digigirlz-judge.jpg" alt="DigiGirlz Judge"></div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/stempanel.jpg" alt="STEM panel group">
+												<div class="content">
+													<h6><b>Organized a Women in STEM panel for as CompSoc VP for the ThisGirlCan Campaign | 2018</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityGreen"></div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/athena.jpg" alt="Athena hackathon talk">
+												<div class="content">
+													<h6><b>Spoke on a Tech for Good panel and judged projects at the Athena Hackathon | 2019</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityPink"></div>
+									</div>
+								</div>
 							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityPink"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/ghc-sign.jpeg" alt="Fab 5 STEMettes in front of Grace Hopper Conference sign">
+												<div class="content">
+													<h6><b>STEMettes Ambassador on the Grace Hopper Conference trip | 2019</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityOrange"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/shesays.jpeg" alt="Me speaking at the SheSays panel">
+												<div class="content">
+													<h6><b>Panelist on the SheSay's Myths and Opportunities of Tech Panel | 2020</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/digigirlz-technicalshowcase.jpg" alt="DigiGirlz technical showcase">
+												<div class="content">
+													<h6><b>Organize Paint 3D, HoloLens, & SwiftKey TechFairs for London DigiGirlz Days | 2019</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityBlue"></div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/unite2030.jpg" alt="Unite 2030 group">
+												<div class="content">
+													<h6><b>Worked with global teammates to win the UNITE2030 Hack for the Planet Hackathon! | 2018</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityGreen"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityGreen"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/compsoc.jpg" alt="Computing society group photo">
+												<div class="content">
+													<h6><b>Ran social and career events, & fundraised for Code.org as CompSoc VP | 2017-18</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityPink"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/scratchjr3.jpg" alt="ScratchJr in preschool">
+												<div class="content">
+													<h6><b>Introduced coding (ScratchJr) curriculum into a montessori preschool | 2016</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+												<img class="img-fluid" id="bestoverall" src="images/community/3x2/courserep.jpg" alt="Course representative prize">
+												<div class="content">
+													<h6><b>Was a four year Computing course rep and recieved the Gold Course Rep award | 2019</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityOrange"></div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6">
+											<div class="photocontainer">
+											<img class="img-fluid" id="bestoverall" src="images/community/3x2/digigirlz-judge.jpg" alt="DigiGirlz Judge">
+												<div class="content">
+													<h6><b>Judged accessible tech hackathon projects at the London DigiGirlz Day | 2019</b></h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 communityBlue"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityPink"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+											<img class="img-fluid" id="bestoverall" src="images/community/3x2/techpathways.jpg" alt="TechPathways speaking event">
+												<div class="content">
+													<h6><b>Presented a Women in Tech talk to students at a Microsoft TechPathways event | 2019</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-6 communityGreen"></div>
+										<div class="col-6">
+											<div class="photocontainer">
+											<img class="img-fluid" id="bestoverall" src="images/community/3x2/digigirlz-group.png" alt="DigiGirlz group">
+												<div class="content">
+													<h6><b>DigiGirlz volunteer at Microsoft HQ with Cindy Rose, CEO of Microsoft UK | 2018</b></h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
 						</div>
 					</div>
 			</section>
 
-			<section class="section container-fluid" id="recognition">
-					<h2 class="centeredTitle" >Recognition</h2>
-					<div class="row wide-gutter">
-						<div class="col-sm-6">
-							<ul>
-								<li><h6 class="award recognitionFirst" >Code First: Girls One to Watch |</h6> 2019</li>
-								<li><h6 class="award recognitionSecond" >Future Stars of Tech Developer Award Shortlist |</h6> 2019</li>
-								<li><h6 class="award recognitionThird" >Winner of the UNITE2030: Hack for the Planet Hackathon |</h6> 2018</li>
-								<li><h6 class="award recognitionFourth" >IBM Prize for Best Final Year Performance |</h6> 2018</li>
-								<li><h6 class="award recognitionFirst" >IBM Prize for Excellent Placement Year Performance |</h6> 2018</li>
-								<li><h6 class="award recognitionSecond" >BCS High Performing Graduate Professional Membership Award |</h6> 2018</li>
-								<li><h6 class="award recognitionThird" >Computing Society Gold STAR Award |</h6> 2018</li>
-								<li><h6 class="award recognitionFourth" >Gold Course Representative Award |</h6> 2018</li>
-								<li><h6 class="award recognitionFirst" >Best Placement Student of the Year for the Faculty of Engineering and Physical Science |</h6> 2018</li>
-							</ul>
-						</div>
-						<div class="col-sm-6">
-							<ul>
-								<li><h6 class="award recognitionSecond" >Winner of the Internet of Things Module Programming Competition |</h6> 2017</li>
-								<li><h6 class="award recognitionThird" >Member of the Students to STEMettes Programme |</h6> 2016 -2017</li>
-								<li><h6 class="award recognitionFourth" >The Sheppard Memorial Prize |</h6> 2016</li>
-								<li><h6 class="award recognitionFirst" >University of Surrey's Advanced Ballet Team |</h6> 2015-2016 </li>
-								<li><h6 class="award recognitionSecond" >Member of the Surrey’s Top Achievers Recognized and Supported Scheme |</h6> 2014-2018</li>
-								<li><h6 class="award recognitionThird" >National Honor Society Member |</h6> 2014</li>
-								<li><h6 class="award recognitionFourth" >Dance Team Scholar Athlete |</h6> 2010-2014</li>
-								<li><h6 class="award recognitionFirst" >Senior Service Award |</h6> 2014</li>
-								<li><h6 class="award recognitionSecond" >American Association of University Women Technology Award |</h6> 2013</li>
-							</ul>
-						</div>
+			<section class="section container-fluid px-3" id="speaking">
+				<h2 class="centeredTitle">Speaking</h2>
+
+				<!-- Speaking 2020 -->
+				<h4 class="centeredSubTitle">2020</h4>
+				<div class="row vertical-subcontainer-fluid justify-content-center logoImage" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+					<div class="col-sm-2 speakingitem">
+						<a href="https://cloudblogs.microsoft.com/industry-blog/en-gb/beyourfuture/2019/11/12/secrets-skills-microsoft-uk-graduates/" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/pinklmf.png" alt="Like Minded Females logo"/>
+							<p class="image-content-header">April | Like Minded Females</p>
+						</a>
+						<p class="image-content-body">Public Speaking Webinar</p>
 					</div>
-			</section>
+					<div class="col-sm-2 speakingitem">
+						<a href="https://stemettes.org/blog/2020/03/10/stemettes-turns-7/" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/stemettes.png" alt="STEMettes logo">
+							<p class="image-content-header">February | STEMettes</p>
+						</a>
+						<p class="image-content-body">7th Birthday Alumni Panel</p>
+					</div>
+					<div class="col-sm-2 speakingitem">
+						<a href="https://www.eventbrite.co.uk/e/women-in-tech-myths-and-opportunities-tickets-90800255007#" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/shesayslondon.png" alt="SheSays logo"/>
+							<p class="image-content-header">February | SheSays London</p>
+						</a>
+						<p class="image-content-body">Myths and Opportunities in Tech Panel</p>
+					</div>
+					<div class="col-sm-2 speakingitem">
+						<a href="https://www.eventbrite.co.uk/e/power-up-futureproof-your-tech-career-for-2020-and-beyond-tickets-90769424793?aff=ebdssbdestsearch" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/shecancode.png" alt="SheCanCode logo"/>
+							<p class="image-content-header">February | SheCanCode</p>
+						</a>
+						<p class="image-content-body">Future Proof Your Career Panel</p>
+					</div>
+				</div>
 
-			<section class="section container-fluid" id="connect">
-					<h2 class="centeredTitle" >Let's Connect!</h2>
-					<p>I am always looking to meet and talk to new likeminded people.
-					If you think we can work together or just want to talk, please get in touch!</p>
-					<a href="mailto:hollyboothroyd@hotmail.com" class="fa fa-envelope" target="_blank"></a>
-					<a href="https://www.linkedin.com/in/holly-boothroyd-68308012a/" class="fa fa-linkedin" target="_blank"></a>
-					<p id="subtext">Find out more:</p>
-					<a href="documents/CV.pdf" class="fa fa fa-file-text-o" target="_blank"></a>
-					<a href="https://medium.com/@hollyboothroyd" class="fa fa-medium" target="_blank"></a>
-					<a href="https://twitter.com/hollyboothroyd_" class="fa fa-twitter" target="_blank"></a>
-					<a href="https://www.instagram.com/herhelloworld/" class="fa fa-instagram" target="_blank"></a>
-					<a href="https://github.com/ObsidianSwan" class="fa fa-github" target="_blank"></a>
-			</section>
+				<!-- Speaking 2019 -->
+				<h4 class="centeredSubTitle">2019</h4>
+				<div class="row vertical-subcontainer-fluid justify-content-center logoImage" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+					<div class="col-sm-2 speakingitem">
+						<a href="https://www.eventbrite.com/e/women-in-london-talk-tech-smart-cities-automation-dlt-cybersec-iot-tickets-74630346375#" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/womenintechrev.jpg" alt="ShowCode Athena logo"/>
+							<p class="image-content-header">November | Women in Tech Revolution</p>
+						</a>
+						<p class="image-content-body">Smart Cities Panel</p>
+					</div>
+					<div class="col-sm-2 speakingitem">
+						<a href="https://www.eventbrite.co.uk/e/women-in-tech-meetup-at-quadrature-london-developing-your-career-in-tech-tickets-73429434415#" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/quadraturecaptial.png" alt="Quadrature Captial logo"/>
+							<p class="image-content-header">October | Quadrature Capital</p>
+						</a>
+						<p class="image-content-body">Technical Interviews & Early in Career Success Talk</p>
+					</div>
+					<div class="col-sm-2 speakingitem">
+						<a href="http://www.techher.uk/index.html" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/microsoft.png" alt="Microsoft logo"/>
+							<p class="image-content-header">June | Microsoft TechHer Conference</p>
+						</a>
+						<p class="image-content-body">Imposter Syndrome Talk</p>
+					</div>
+					<div class="col-sm-2 speakingitem">
+						<a href="https://www.athenaldn.com/copy-of-athena-hack" target="_blank">
+							<img class="center-block img-fluid" src="images/speaking/showcode.png" alt="ShowCode Athena logo"/>
+							<p class="image-content-header">April | ShowCode Athena Hackathon</p>
+						</a>
+						<p class="image-content-body">Tech for Good Panel</p>
+					</div>
+					<div class="col-sm-2 speakingitem">
+						<img class="center-block img-fluid" src="images/speaking/microsoft.png" alt="Microsoft logo"/>
+						<p class="image-content-header">April | Microsoft TechPathways</p>
+						<p class="image-content-body">Women in Technology Talk</p>
+					</div>
+				</div>
+			</div>
 
-		<script>
-			ScrollReveal().reveal('.section', {duration: 2750, mobile: true});
-		</script>
+			<!-- Speaking 2018 -->
+			<h4 class="centeredSubTitle">2018</h4>
+			<div class="row vertical-subcontainer-fluid justify-content-center logoImage" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+				<div class="col-sm-2 speakingitem">
+					<img class="center-block img-fluid" src="images/speaking/surreyuni.png" alt="University of Surrey logo">
+					<p class="image-content-header">December - June | University of Surrey</p>
+					<p class="image-content-body">Computing Open Day Placement Talks</p>
+				</div>
+				<div class="col-sm-2 speakingitem">
+					<a href="https://www.facebook.com/events/512012082496848/" target="_blank">
+						<img class="center-block img-fluid" src="images/speaking/compsoc.jpg" alt="University of Surrey Computing Society logo">
+						<p class="image-content-header">November | Surrey Computing Society</p>
+					</a>
+					<p class="image-content-body">Women in STEM Panel Host & Organizer</p>
+				</div>
+				<div class="col-sm-2 speakingitem">
+					<img class="center-block img-fluid" src="images/speaking/issaquahhigh.jpg" alt="Issaquah High School logo">
+					<p class="image-content-header">April | Issaquah High School</p>
+					<p class="image-content-body">Studying Abroad in the UK Talk</p>
+				</div>
+			</div>
+
+			<!-- YouTube Button -->
+			<div class="row justify-content-center">
+				<a class="btn btn-primary externalLinkButton" href="https://www.youtube.com/user/hollyboothroyd123/videos" target="_blank">Watch Recordings</a>
+			</div>
+		</section>
+
+		<section class="section container-fluid px-0" id="herhelloworld">
+			<div>
+				<div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="175" data-aos-once="true">
+					<h2 class="centeredTitle">@HerHelloWorld</h2>
+					<p>
+					I founded <a href="https://www.instagram.com/herhelloworld/" target="_blank">HerHelloWorld</a> in 2018 to mentor new technologists, create an inclusive tech-centered community, and share the dynamic nature of the tech industry
+					in the aim of helping build a more representative industry.
+					HerHelloWorld is where I answer early-in-career questions, review books, discuss changes in technology, share events that I attend or speak at, and address barriers for
+					women entering STEM.
+					</p>
+				</div>
+
+				<!-- HerHelloWorld Button -->
+				<div class="row justify-content-center">
+					<a class="btn btn-primary externalLinkColorButton" href="https://www.instagram.com/herhelloworld/" target="_blank">Follow HerHelloWorld</a>
+				</div>
+
+				<h4>My message: Women can thrive in STEM.</h4>
+			</div>
+			<!-- LightWidget WIDGET -->
+			<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+			<iframe src="http://lightwidget.com/widgets/7666457f1cc95930b73686ea837e7a9f.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+		</section>
+
+		<section class="section container-fluid" id="recognition">
+				<h2 class="centeredTitle" >Recognition</h2>
+				<div class="row wide-gutter">
+					<div class="col-sm-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+						<ul>
+							<li><h6 class="award recognitionFourth" >TechWomen100 Award Winner |</h6> 2019</li>
+							<li><h6 class="award recognitionFirst" >Code First: Girls One to Watch |</h6> 2019</li>
+							<li><h6 class="award recognitionSecond" >Future Stars of Tech Developer Award Shortlist |</h6> 2019</li>
+							<li><h6 class="award recognitionThird" >Winner of the UNITE2030: Hack for the Planet Hackathon |</h6> 2018</li>
+							<li><h6 class="award recognitionFourth" >IBM Prize for Best Final Year Performance |</h6> 2018</li>
+							<li><h6 class="award recognitionFirst" >IBM Prize for Excellent Placement Year Performance |</h6> 2018</li>
+							<li><h6 class="award recognitionSecond" >BCS High Performing Graduate Professional Membership Award |</h6> 2018</li>
+							<li><h6 class="award recognitionThird" >Computing Society Gold STAR Award |</h6> 2018</li>
+							<li><h6 class="award recognitionFourth" >Gold Course Representative Award |</h6> 2018</li>
+							<li><h6 class="award recognitionFirst" >Best Placement Student of the Year for the Faculty of Engineering and Physical Science |</h6> 2018</li>
+						</ul>
+					</div>
+					<div class="col-sm-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+						<ul>
+							<li><h6 class="award recognitionSecond" >Winner of the Internet of Things Module Programming Competition |</h6> 2017</li>
+							<li><h6 class="award recognitionThird" >Member of the Students to STEMettes Programme |</h6> 2016 -2017</li>
+							<li><h6 class="award recognitionFourth" >The Sheppard Memorial Prize |</h6> 2016</li>
+							<li><h6 class="award recognitionFirst" >University of Surrey's Advanced Ballet Team |</h6> 2015-2016 </li>
+							<li><h6 class="award recognitionSecond" >Member of the Surrey’s Top Achievers Recognized and Supported Scheme |</h6> 2014-2018</li>
+							<li><h6 class="award recognitionThird" >National Honor Society Member |</h6> 2014</li>
+							<li><h6 class="award recognitionFourth" >Dance Team Scholar Athlete |</h6> 2010-2014</li>
+							<li><h6 class="award recognitionFirst" >Senior Service Award |</h6> 2014</li>
+							<li><h6 class="award recognitionSecond" >American Association of University Women Technology Award |</h6> 2013</li>
+						</ul>
+					</div>
+				</div>
+		</section>
+
+		<section class="section container-fluid" id="connect">
+			<div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="175" data-aos-once="true">
+				<h2 class="centeredTitle" >Reach Out!</h2>
+				<p>I am always looking to meet and talk to new likeminded people.
+				If you think we can work together or just want to talk, please get in touch!</p>
+				<a href="mailto:hollyboothroyd@hotmail.com" class="fa fa-envelope" target="_blank"></a>
+				<a href="https://www.linkedin.com/in/holly-boothroyd-68308012a/" class="fa fa-linkedin" target="_blank"></a>
+				<a href="https://www.instagram.com/herhelloworld/" class="fa fa-instagram" target="_blank"></a>
+				<p id="subtext">Find out more:</p>
+				<a href="documents/CV.pdf" class="fa fa fa-file-text-o" target="_blank"></a>
+				<a href="https://medium.com/@hollyboothroyd" class="fa fa-medium" target="_blank"></a>
+				<a href="https://twitter.com/hollyboothroyd_" class="fa fa-twitter" target="_blank"></a>
+				<a href="https://github.com/ObsidianSwan" class="fa fa-github" target="_blank"></a>
+			</div>
+		</section>
+
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	  <script>
+	    AOS.init();
+	  </script>
 	</body>
 </html>
