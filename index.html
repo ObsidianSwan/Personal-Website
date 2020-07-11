@@ -13,31 +13,21 @@
 		<link rel="stylesheet" type="text/css" href="styles/main.css" />
 		<link rel="stylesheet" type="text/css" href="styles/photocontainer.css" />
 		<link rel="stylesheet" type="text/css" href="styles/timeline.css" />
-		<link rel="stylesheet" type="text/css" href="styles/carousel.css" />
-		<link rel="stylesheet" type="text/css" href="styles/timeline.css" />
-		<link rel="stylesheet" type="text/css" href="styles/recognition.css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-		integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
-		<script type="text/javascript" src="fullpage/vendors/scrolloverflow.min.js"></script>
-
-		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 		<script>
 			function showPerformanceAward() {
 				document.getElementById('modal-title-contents').innerHTML = 'IBM Prize for Best Performance & IBM Prize for Excellent Placement Year Performance';
-				document.getElementById('modal-body-img').src = "images/bestoverall.jpg";
+				document.getElementById('modal-body-img').src = "images/education/bestoverall.jpg";
 				document.getElementById('modal-body-contents').innerHTML =
 				'I was awarded the best performance prize for graduating at the top of my class and maintaining the highest mark in my degree each year. I was further awarded for excellent placement performance and significant workplace contributions.';
 			}
 
 			function showPlacementAward() {
 				document.getElementById('modal-title-contents').innerHTML = 'Best Placement Student of the Year for the Faculty of Engineering and Physical Science';
-				document.getElementById('modal-body-img').src = "images/placementaward.png";
+				document.getElementById('modal-body-img').src = "images/education/placementaward.jpg";
 				document.getElementById('modal-body-contents').innerHTML =
 				'I significantly contributed to the work of my employer, the enhancement of other students development and experiences, and in building partnerships between Surrey University and industry.';
 			}
@@ -51,6 +41,7 @@
 		  color: #1d2124;
 		  height: 100%;
 			overflow-x: hidden;
+			padding-right: 0px !important;
 		}
 
 		h2, h4, .centeredTitle {
@@ -151,9 +142,10 @@
 			text-decoration: underline;
 		}
 
-		.modal-dialog {
-			margin: 1.5% auto;
+		.modal{
+			padding-right: 0px !important;
 		}
+
 		.modal-content {
 			background-color: #1d2124;
 			color: white;
@@ -174,10 +166,6 @@
 
 		#modal-content button {
 			float: right;
-		}
-
-		.modal-content {
-		  width:100%;
 		}
 
 		.modal-content img {
@@ -246,9 +234,9 @@
 			<section class="section container-fluid" id="home">
 					<div class="row">
 						<div class="col-sm-6 vertical-center-container container-buffer">
-							<img class="w-75" id="selfportait" src="images/title/profile.jpeg" alt="profile">
+							<img class="w-75" id="selfportait" src="images/title/profile.jpg" alt="profile">
 						</div>
-						<div class="col-sm-6 vertical-center-container container-buffer" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" id="about">
+						<div class="col-sm-6 vertical-center-container container-buffer" id="about">
 							<div class="vertical-center-text">
 								<h2 class="centeredTitle" >{Hi, I'm Holly!}</h2>
 								<br/>
@@ -372,21 +360,17 @@
 				<div class="row" style="padding-top:3%">
 					<div class="col-sm-6">
 						<a onclick="showPerformanceAward()" data-toggle="modal" data-target="#imgModal">
-							<div class="photocontainer">
-								<img class="rounded img-fluid" id="bestoverall" src="images/education/bestoverall.jpg" alt="Best Overall">
-								<div class="content">
-									<h6><b>IBM Prize for Best Performance & IBM Prize for Excellent Placement Year Performance</b></h6>
-								</div>
+							<img class="rounded img-fluid photocontainer"  src="images/education/bestoverall.jpg" alt="Best Overall">
+							<div class="content">
+								<h6><b>IBM Prize for Best Performance & IBM Prize for Excellent Placement Year Performance</b></h6>
 							</div>
 						</a>
 					</div>
 					<div class="col-sm-6">
 						<a onclick="showPlacementAward()" data-toggle="modal" data-target="#imgModal">
-							<div class="photocontainer">
-								<img class="rounded img-fluid" id="placementaward" src="images/education/placementaward.png" alt="Placement Award">
-								<div class="content">
-									<h6><b>Best Placement Student of the Year for the Faculty of Engineering and Physical Science</b></h6>
-								</div>
+							<img class="rounded img-fluid photocontainer" id="placementaward" src="images/education/placementaward.jpg" alt="Placement Award">
+							<div class="content">
+								<h6><b>Best Placement Student of the Year for the Faculty of Engineering and Physical Science</b></h6>
 							</div>
 						</a>
 					</div>
@@ -418,8 +402,8 @@
 						<p class="image-content-body">I'm a Microsoft Software Engineer - I've worked on Xbox, Paint 3D and now Cortana: AMA | <i>Oct 2020</i> </p>
 					</div>
 					<div class="col-sm-2">
-						<a href="https://shecancode.io/blog/how-can-you-futureproof-your-career" target="_blank"><img class="center-block img-fluid" src="images/featuredin/wogrammer2.png" alt="Wogrammer logo"></a>
-						<p class="image-content-body">What can you do to futureproof your career? | <i>May 2020 </i></p>
+						<a href="https://wogrammer.org/stories/hboothroyd" target="_blank"><img class="center-block img-fluid" src="images/featuredin/wogrammer2.png" alt="Wogrammer logo"></a>
+						<p class="image-content-body">Find Your Selling Point: How Holly Boothroyd Found Her Niche In Software Engineering | <i>May 2020 </i></p>
 					</div>
 				</div>
 				<h4 class="centeredSubTitle">Radio & Podcasts</h4>
@@ -468,7 +452,7 @@
 									<div class="row">
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/techher.jpg" alt="TechHer speaking">
+												<img class="img-fluid"  src="images/community/3x2/techher.jpg" alt="TechHer speaking">
 												<div class="content">
 													<h6><b>Spoke about Imposter Syndrome at Microsoft's TechHer Conference | 2019</b></h6>
 												</div>
@@ -481,7 +465,7 @@
 									<div class="row">
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/melindagates.jpg" alt="Melinda Gates group">
+												<img class="img-fluid"  src="images/community/3x2/melindagates.jpg" alt="Melinda Gates group">
 												<div class="content">
 													<h6><b>Invited guest at the BBC Radio 5 Live Melinda Gates interview | 2019</b></h6>
 												</div>
@@ -498,7 +482,7 @@
 										<div class="col-6 communityOrange"></div>
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/lydia-graduation.jpeg" alt="Student to STEMettes graduation">
+												<img class="img-fluid" src="images/community/3x2/lydia-graduation.jpeg" alt="Student to STEMettes graduation">
 												<div class="content">
 													<h6><b>Mentor in the Student to STEMettes mentorship program | 2019</b></h6>
 												</div>
@@ -511,7 +495,7 @@
 										<div class="col-6 communityBlue"></div>
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/asini.jpg" alt="Microsoft mentee and I">
+												<img class="img-fluid"  src="images/community/3x2/asini.jpg" alt="Microsoft mentee and I">
 												<div class="content">
 													<h6><b>Mentor to Microsoft early-in-career employees | 2019-20</b></h6>
 												</div>
@@ -526,7 +510,7 @@
 									<div class="row">
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/stempanel.jpg" alt="STEM panel group">
+												<img class="img-fluid" src="images/community/3x2/stempanel.jpg" alt="STEM panel group">
 												<div class="content">
 													<h6><b>Organized a Women in STEM panel for as CompSoc VP for the ThisGirlCan Campaign | 2018</b></h6>
 												</div>
@@ -539,7 +523,7 @@
 									<div class="row">
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/athena.jpg" alt="Athena hackathon talk">
+												<img class="img-fluid"  src="images/community/3x2/athena.jpg" alt="Athena hackathon talk">
 												<div class="content">
 													<h6><b>Spoke on a Tech for Good panel and judged projects at the Athena Hackathon | 2019</b></h6>
 												</div>
@@ -556,7 +540,7 @@
 										<div class="col-6 communityPink"></div>
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/ghc-sign.jpeg" alt="Fab 5 STEMettes in front of Grace Hopper Conference sign">
+												<img class="img-fluid"  src="images/community/3x2/ghc-sign.jpeg" alt="Fab 5 STEMettes in front of Grace Hopper Conference sign">
 												<div class="content">
 													<h6><b>STEMettes Ambassador on the Grace Hopper Conference trip | 2019</b></h6>
 												</div>
@@ -569,7 +553,7 @@
 										<div class="col-6 communityOrange"></div>
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/shesays.jpeg" alt="Me speaking at the SheSays panel">
+												<img class="img-fluid"  src="images/community/3x2/shesays.jpeg" alt="Me speaking at the SheSays panel">
 												<div class="content">
 													<h6><b>Panelist on the SheSay's Myths and Opportunities of Tech Panel | 2020</b></h6>
 												</div>
@@ -584,7 +568,7 @@
 									<div class="row">
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/digigirlz-technicalshowcase.jpg" alt="DigiGirlz technical showcase">
+												<img class="img-fluid"  src="images/community/3x2/digigirlz-technicalshowcase.jpg" alt="DigiGirlz technical showcase">
 												<div class="content">
 													<h6><b>Organize Paint 3D, HoloLens, & SwiftKey TechFairs for London DigiGirlz Days | 2019</b></h6>
 												</div>
@@ -597,7 +581,7 @@
 									<div class="row">
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/unite2030.jpg" alt="Unite 2030 group">
+												<img class="img-fluid"  src="images/community/3x2/unite2030.jpg" alt="Unite 2030 group">
 												<div class="content">
 													<h6><b>Worked with global teammates to win the UNITE2030 Hack for the Planet Hackathon! | 2018</b></h6>
 												</div>
@@ -614,7 +598,7 @@
 										<div class="col-6 communityGreen"></div>
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/compsoc.jpg" alt="Computing society group photo">
+												<img class="img-fluid"  src="images/community/3x2/compsoc.jpg" alt="Computing society group photo">
 												<div class="content">
 													<h6><b>Ran social and career events, & fundraised for Code.org as CompSoc VP | 2017-18</b></h6>
 												</div>
@@ -627,7 +611,7 @@
 										<div class="col-6 communityPink"></div>
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/scratchjr3.jpg" alt="ScratchJr in preschool">
+												<img class="img-fluid"  src="images/community/3x2/scratchjr3.jpg" alt="ScratchJr in preschool">
 												<div class="content">
 													<h6><b>Introduced coding (ScratchJr) curriculum into a montessori preschool | 2016</b></h6>
 												</div>
@@ -642,7 +626,7 @@
 									<div class="row">
 										<div class="col-6">
 											<div class="photocontainer">
-												<img class="img-fluid" id="bestoverall" src="images/community/3x2/courserep.jpg" alt="Course representative prize">
+												<img class="img-fluid"  src="images/community/3x2/courserep.jpg" alt="Course representative prize">
 												<div class="content">
 													<h6><b>Was a four year Computing course rep and recieved the Gold Course Rep award | 2019</b></h6>
 												</div>
@@ -655,7 +639,7 @@
 									<div class="row">
 										<div class="col-6">
 											<div class="photocontainer">
-											<img class="img-fluid" id="bestoverall" src="images/community/3x2/digigirlz-judge.jpg" alt="DigiGirlz Judge">
+											<img class="img-fluid"  src="images/community/3x2/digigirlz-judge.jpg" alt="DigiGirlz Judge">
 												<div class="content">
 													<h6><b>Judged accessible tech hackathon projects at the London DigiGirlz Day | 2019</b></h6>
 												</div>
@@ -672,7 +656,7 @@
 										<div class="col-6 communityPink"></div>
 										<div class="col-6">
 											<div class="photocontainer">
-											<img class="img-fluid" id="bestoverall" src="images/community/3x2/techpathways.jpg" alt="TechPathways speaking event">
+											<img class="img-fluid"  src="images/community/3x2/techpathways.jpg" alt="TechPathways speaking event">
 												<div class="content">
 													<h6><b>Presented a Women in Tech talk to students at a Microsoft TechPathways event | 2019</b></h6>
 												</div>
@@ -685,7 +669,7 @@
 										<div class="col-6 communityGreen"></div>
 										<div class="col-6">
 											<div class="photocontainer">
-											<img class="img-fluid" id="bestoverall" src="images/community/3x2/digigirlz-group.png" alt="DigiGirlz group">
+											<img class="img-fluid"  src="images/community/3x2/digigirlz-group.png" alt="DigiGirlz group">
 												<div class="content">
 													<h6><b>DigiGirlz volunteer at Microsoft HQ with Cindy Rose, CEO of Microsoft UK | 2018</b></h6>
 												</div>
