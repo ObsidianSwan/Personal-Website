@@ -54,6 +54,11 @@
 			text-transform: uppercase;
 		}
 
+		.row {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+
 		.centeredTitle {
 			font-size: 2em;
 		}
@@ -71,6 +76,9 @@
 			padding-left: calc(5% + 4vw);
 			padding-right: calc(5% + 4vw);
 			height: 100%;
+			margin-left: 0px;
+			margin-right: 0px;
+			overflow: hidden;
 		}
 
 		.vertical-container-fluid {
@@ -128,7 +136,6 @@
 		.externalLinkColorButton:hover{
 			background-color: black;
 			border-color: black;
-			text-decoration: none;
 		}
 
 		a {
@@ -231,118 +238,119 @@
 		</div>
 
 		<!-- Core Content -->
-			<section class="section container-fluid" id="home">
-					<div class="row">
-						<div class="col-sm-6 vertical-center-container container-buffer">
-							<img class="w-75" id="selfportait" src="images/title/profile.jpg" alt="profile">
-						</div>
-						<div class="col-sm-6 vertical-center-container container-buffer" id="about">
-							<div class="vertical-center-text">
-								<h2 class="centeredTitle" >{Hi, I'm Holly!}</h2>
-								<br/>
-								<p>I am a passionate developer with a keen interest in the latest technologies.
-								With experience working on multiple robust globally released products, I strive to create
-								impact on others lives to be more creative, productive, and fun.
-								<br/>
-								<br/>
-								Along with my development work, I actively support diversity and inclusion in the technology
-								industry through various community events and organizations.
-							</div>
+		<section class="section container-fluid" id="home">
+				<div class="row">
+					<div class="col-sm-6 vertical-center-container container-buffer">
+						<img class="w-75" id="selfportait" src="images/title/profile.jpg" alt="profile">
+					</div>
+					<div class="col-sm-6 vertical-center-container container-buffer" id="about">
+						<div class="vertical-center-text">
+							<h2 class="centeredTitle" >{Hi, I'm Holly!}</h2>
+							<br/>
+							<p>I am a passionate developer with a keen interest in the latest technologies.
+							With experience working on multiple robust globally released products, I strive to create
+							impact on others lives to be more creative, productive, and fun.
+							<br/>
+							<br/>
+							Along with my development work, I actively support diversity and inclusion in the technology
+							industry through various community events and organizations.
 						</div>
 					</div>
-			</section>
+				</div>
+		</section>
 
-			<section class="section container-fluid px-0" id="experience">
-					<h2 class="centeredTitle" >Experience</h2>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="main-timeline">
-								<div class="timeline">
 									<span class="timeline-icon"></span>
-									<div class="timeline-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
-										<i class="icon fa fa-windows"></i>
-										<p class="description">
-											<h5><a href="https://www.microsoft.com/en-gb/windows/cortana" target="_blank">Software Engineer | Cortana</a></h5>
-											<h6>Microsoft - London, England</h6>
-										</p>
-									</div>
-									<div class="year"><span>2017-Present</span></div>
-								</div>
-								<div class="timeline second">
-									<span class="timeline-icon"></span>
-									<div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
-										<i class="icon fa fa-desktop"></i>
-										<p class="description">
-											<h5><a href="https://www.facebook.com/ComputingSoc/" target="_blank">VP of the Computing Society</a></h5>
-											<h6>University of Surrey - Guildford, England</h6>
-										</p>
-									</div>
-									<div class="year"><span>2017-2018</span></div>
-								</div>
-								<div class="timeline third">
-									<span class="timeline-icon"></span>
-									<div class="timeline-content XboxTimelineContent" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" id="">
-										<i class="icon fa fa-windows"></i>
-										<p class="description">
-											<h5><a href="https://www.xbox.com/" target="_blank">Software Engineering Intern | Xbox</a></h5>
-											<h6>Microsoft - Redmond, USA</h6>
-										</p>
-									</div>
-									<div class="year"><span>2017</span></div>
-								</div>
-								<div class="timeline fourth">
-									<span class="timeline-icon"></span>
-									<div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" data-aos-achor=".XboxTimelineContent">
-										<i class="icon fa fa-windows"></i>
-										<p class="description">
-											<h5><a href="https://www.microsoft.com/en-gb/p/paint-3d/9nblggh5fv99?activetab=pivot:overviewtab" target="_blank">Software Engineering Intern | Paint 3D</a></h5>
-											<h6>Microsoft - London, England</h6>
-										</p>
-									</div>
-									<div class="year"><span>2016-2017</span></div>
-								</div>
-								<div class="timeline">
-									<span class="timeline-icon"></span>
-									<div class="timeline-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
-										<i class="icon fa fa-globe"></i>
-										<p class="description">
-											<h5><a href="http://blogs.surrey.ac.uk/usablog/author/hb00191/" target="_blank">International Student Ambassador</a></h5>
-											<h6>University of Surrey - Guildford, England</h6>
-										</p>
-									</div>
-									<div class="year"><span>2015-2018</span></div>
-								</div>
-								<div class="timeline second">
-									<span class="timeline-icon"></span>
-									<div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
-										<i class="icon fa fa-group"></i>
-										<p class="description">
-											<h5><b>Computer Science Applicant Day Presenter</b></h5>
-											<h6>University of Surrey - Guildford, England</h6>
-										</p>
-									</div>
-									<div class="year"><span>2015-2018</span></div>
-								</div>
-								<div class="timeline third">
-									<span class="timeline-icon"></span>
-									<div class="timeline-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
-										<i class="icon fa fa-desktop"></i>
-										<p class="description">
-											<h5><b>Computer Science Lab Demonstrator</b></h5>
-											<h6>University of Surrey - Guildford, England</h6>
-										</p>
-									</div>
-									<div class="year"><span>2015</span></div>
-								</div>
+		<section class="section container-fluid px-0" id="experience">
+			<h2 class="centeredTitle" >Experience</h2>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="main-timeline">
+						<div class="timeline">
+							<span class="timeline-icon"></span>
+							<div class="timeline-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+								<i class="icon fa fa-windows"></i>
+								<p class="description">
+									<h5><a href="https://www.microsoft.com/en-gb/windows/cortana" target="_blank">Software Engineer | Cortana</a></h5>
+									<h6>Microsoft - London, England</h6>
+								</p>
 							</div>
+							<div class="year"><span>2017-Present</span></div>
+						</div>
+						<div class="timeline second">
+							<span class="timeline-icon"></span>
+							<div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+								<i class="icon fa fa-desktop"></i>
+								<p class="description">
+									<h5><a href="https://www.facebook.com/ComputingSoc/" target="_blank">VP of the Computing Society</a></h5>
+									<h6>University of Surrey - Guildford, England</h6>
+								</p>
+							</div>
+							<div class="year"><span>2017-2018</span></div>
+						</div>
+						<div class="timeline third">
+							<span class="timeline-icon"></span>
+							<div class="timeline-content XboxTimelineContent" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" id="">
+								<i class="icon fa fa-windows"></i>
+								<p class="description">
+									<h5><a href="https://www.xbox.com/" target="_blank">Software Engineering Intern | Xbox</a></h5>
+									<h6>Microsoft - Redmond, USA</h6>
+								</p>
+							</div>
+							<div class="year"><span>2017</span></div>
+						</div>
+						<div class="timeline fourth">
+							<span class="timeline-icon"></span>
+							<div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" data-aos-achor=".XboxTimelineContent">
+								<i class="icon fa fa-windows"></i>
+								<p class="description">
+									<h5><a href="https://www.microsoft.com/en-gb/p/paint-3d/9nblggh5fv99?activetab=pivot:overviewtab" target="_blank">Software Engineering Intern | Paint 3D</a></h5>
+									<h6>Microsoft - London, England</h6>
+								</p>
+							</div>
+							<div class="year"><span>2016-2017</span></div>
+						</div>
+						<div class="timeline">
+							<span class="timeline-icon"></span>
+							<div class="timeline-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+								<i class="icon fa fa-globe"></i>
+								<p class="description">
+									<h5><a href="http://blogs.surrey.ac.uk/usablog/author/hb00191/" target="_blank">International Student Ambassador</a></h5>
+									<h6>University of Surrey - Guildford, England</h6>
+								</p>
+							</div>
+							<div class="year"><span>2015-2018</span></div>
+						</div>
+						<div class="timeline second">
+							<span class="timeline-icon"></span>
+							<div class="timeline-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+								<i class="icon fa fa-group"></i>
+								<p class="description">
+									<h5><b>Computer Science Applicant Day Presenter</b></h5>
+									<h6>University of Surrey - Guildford, England</h6>
+								</p>
+							</div>
+							<div class="year"><span>2015-2018</span></div>
+						</div>
+						<div class="timeline third">
+							<span class="timeline-icon"></span>
+							<div class="timeline-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+								<i class="icon fa fa-desktop"></i>
+								<p class="description">
+									<h5><b>Computer Science Lab Demonstrator</b></h5>
+									<h6>University of Surrey - Guildford, England</h6>
+								</p>
+							</div>
+							<div class="year"><span>2015</span></div>
 						</div>
 					</div>
-					<div class="row text-center">
-						<div class="col-12">
-							<a class="btn btn-primary externalLinkButton" href="https://www.linkedin.com/in/holly-boothroyd-68308012a/" target="_blank">Learn More</a>
-						</div>
-					</div>
-			</section>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-12">
+					<a class="btn btn-primary externalLinkButton" href="https://www.linkedin.com/in/holly-boothroyd-68308012a/" target="_blank">Learn More</a>
+				</div>
+			</div>
+		</section>
 
 			<section class="section container-fluid" id="graduate">
 				<div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="175" data-aos-once="true">
@@ -358,7 +366,7 @@
 					</p>
 				</div>
 				<div class="row" style="padding-top:3%">
-					<div class="col-sm-6">
+					<div class="col-sm-6" style="padding-bottom:3%">
 						<a onclick="showPerformanceAward()" data-toggle="modal" data-target="#imgModal">
 							<div class="photo-container rounded">
 								<img src="images/education/bestoverall.jpg" alt="Best student overall award">
@@ -452,8 +460,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="col-lg-6" id="communityImages">
-
+						<div class="col-lg-6 p-0" id="communityImages">
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="row">
@@ -690,78 +697,77 @@
 					</div>
 			</section>
 
-			<section class="section container-fluid px-3" id="speaking">
-				<h2 class="centeredTitle">Speaking</h2>
+		<section class="section container-fluid px-3" id="speaking">
+			<h2 class="centeredTitle">Speaking</h2>
 
-				<!-- Speaking 2020 -->
-				<h4 class="centeredSubTitle">2020</h4>
-				<div class="row vertical-subcontainer-fluid justify-content-center logoImage" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
-					<div class="col-sm-2 speakingitem">
-						<a href="https://cloudblogs.microsoft.com/industry-blog/en-gb/beyourfuture/2019/11/12/secrets-skills-microsoft-uk-graduates/" target="_blank">
-							<img class="center-block img-fluid" src="images/speaking/pinklmf.png" alt="Like Minded Females logo"/>
-							<p class="image-content-header">April | Like Minded Females</p>
-						</a>
-						<p class="image-content-body">Public Speaking Webinar</p>
-					</div>
-					<div class="col-sm-2 speakingitem">
-						<a href="https://stemettes.org/blog/2020/03/10/stemettes-turns-7/" target="_blank">
-							<img class="center-block img-fluid" src="images/speaking/stemettes.png" alt="STEMettes logo">
-							<p class="image-content-header">February | STEMettes</p>
-						</a>
-						<p class="image-content-body">7th Birthday Alumni Panel</p>
-					</div>
-					<div class="col-sm-2 speakingitem">
-						<a href="https://www.eventbrite.co.uk/e/women-in-tech-myths-and-opportunities-tickets-90800255007#" target="_blank">
-							<img class="center-block img-fluid" src="images/speaking/shesayslondon.png" alt="SheSays logo"/>
-							<p class="image-content-header">February | SheSays London</p>
-						</a>
-						<p class="image-content-body">Myths and Opportunities in Tech Panel</p>
-					</div>
-					<div class="col-sm-2 speakingitem">
-						<a href="https://www.eventbrite.co.uk/e/power-up-futureproof-your-tech-career-for-2020-and-beyond-tickets-90769424793?aff=ebdssbdestsearch" target="_blank">
-							<img class="center-block img-fluid" src="images/speaking/shecancode.png" alt="SheCanCode logo"/>
-							<p class="image-content-header">February | SheCanCode</p>
-						</a>
-						<p class="image-content-body">Future Proof Your Career Panel</p>
-					</div>
+			<!-- Speaking 2020 -->
+			<h4 class="centeredSubTitle">2020</h4>
+			<div class="row vertical-subcontainer-fluid justify-content-center logoImage" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+				<div class="col-sm-2 speakingitem">
+					<a href="https://cloudblogs.microsoft.com/industry-blog/en-gb/beyourfuture/2019/11/12/secrets-skills-microsoft-uk-graduates/" target="_blank">
+						<img class="center-block img-fluid" src="images/speaking/pinklmf.png" alt="Like Minded Females logo"/>
+						<p class="image-content-header">April | Like Minded Females</p>
+					</a>
+					<p class="image-content-body">Public Speaking Webinar</p>
 				</div>
+				<div class="col-sm-2 speakingitem">
+					<a href="https://stemettes.org/blog/2020/03/10/stemettes-turns-7/" target="_blank">
+						<img class="center-block img-fluid" src="images/speaking/stemettes.png" alt="STEMettes logo">
+						<p class="image-content-header">February | STEMettes</p>
+					</a>
+					<p class="image-content-body">7th Birthday Alumni Panel</p>
+				</div>
+				<div class="col-sm-2 speakingitem">
+					<a href="https://www.eventbrite.co.uk/e/women-in-tech-myths-and-opportunities-tickets-90800255007#" target="_blank">
+						<img class="center-block img-fluid" src="images/speaking/shesayslondon.png" alt="SheSays logo"/>
+						<p class="image-content-header">February | SheSays London</p>
+					</a>
+					<p class="image-content-body">Myths and Opportunities in Tech Panel</p>
+				</div>
+				<div class="col-sm-2 speakingitem">
+					<a href="https://www.eventbrite.co.uk/e/power-up-futureproof-your-tech-career-for-2020-and-beyond-tickets-90769424793?aff=ebdssbdestsearch" target="_blank">
+						<img class="center-block img-fluid" src="images/speaking/shecancode.png" alt="SheCanCode logo"/>
+						<p class="image-content-header">February | SheCanCode</p>
+					</a>
+					<p class="image-content-body">Future Proof Your Career Panel</p>
+				</div>
+			</div>
 
-				<!-- Speaking 2019 -->
-				<h4 class="centeredSubTitle">2019</h4>
-				<div class="row vertical-subcontainer-fluid justify-content-center logoImage" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
-					<div class="col-sm-2 speakingitem">
-						<a href="https://www.eventbrite.com/e/women-in-london-talk-tech-smart-cities-automation-dlt-cybersec-iot-tickets-74630346375#" target="_blank">
-							<img class="center-block img-fluid" src="images/speaking/womenintechrev.jpg" alt="ShowCode Athena logo"/>
-							<p class="image-content-header">November | Women in Tech Revolution</p>
-						</a>
-						<p class="image-content-body">Smart Cities Panel</p>
-					</div>
-					<div class="col-sm-2 speakingitem">
-						<a href="https://www.eventbrite.co.uk/e/women-in-tech-meetup-at-quadrature-london-developing-your-career-in-tech-tickets-73429434415#" target="_blank">
-							<img class="center-block img-fluid" src="images/speaking/quadraturecaptial.png" alt="Quadrature Captial logo"/>
-							<p class="image-content-header">October | Quadrature Capital</p>
-						</a>
-						<p class="image-content-body">Technical Interviews & Early in Career Success Talk</p>
-					</div>
-					<div class="col-sm-2 speakingitem">
-						<a href="http://www.techher.uk/index.html" target="_blank">
-							<img class="center-block img-fluid" src="images/speaking/microsoft.png" alt="Microsoft logo"/>
-							<p class="image-content-header">June | Microsoft TechHer Conference</p>
-						</a>
-						<p class="image-content-body">Imposter Syndrome Talk</p>
-					</div>
-					<div class="col-sm-2 speakingitem">
-						<a href="https://www.athenaldn.com/copy-of-athena-hack" target="_blank">
-							<img class="center-block img-fluid" src="images/speaking/showcode.png" alt="ShowCode Athena logo"/>
-							<p class="image-content-header">April | ShowCode Athena Hackathon</p>
-						</a>
-						<p class="image-content-body">Tech for Good Panel</p>
-					</div>
-					<div class="col-sm-2 speakingitem">
+			<!-- Speaking 2019 -->
+			<h4 class="centeredSubTitle">2019</h4>
+			<div class="row vertical-subcontainer-fluid justify-content-center logoImage" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+				<div class="col-sm-2 speakingitem">
+					<a href="https://www.eventbrite.com/e/women-in-london-talk-tech-smart-cities-automation-dlt-cybersec-iot-tickets-74630346375#" target="_blank">
+						<img class="center-block img-fluid" src="images/speaking/womenintechrev.jpg" alt="ShowCode Athena logo"/>
+						<p class="image-content-header">November | Women in Tech Revolution</p>
+					</a>
+					<p class="image-content-body">Smart Cities Panel</p>
+				</div>
+				<div class="col-sm-2 speakingitem">
+					<a href="https://www.eventbrite.co.uk/e/women-in-tech-meetup-at-quadrature-london-developing-your-career-in-tech-tickets-73429434415#" target="_blank">
+						<img class="center-block img-fluid" src="images/speaking/quadraturecaptial.png" alt="Quadrature Captial logo"/>
+						<p class="image-content-header">October | Quadrature Capital</p>
+					</a>
+					<p class="image-content-body">Technical Interviews & Early in Career Success Talk</p>
+				</div>
+				<div class="col-sm-2 speakingitem">
+					<a href="http://www.techher.uk/index.html" target="_blank">
 						<img class="center-block img-fluid" src="images/speaking/microsoft.png" alt="Microsoft logo"/>
-						<p class="image-content-header">April | Microsoft TechPathways</p>
-						<p class="image-content-body">Women in Technology Talk</p>
-					</div>
+						<p class="image-content-header">June | Microsoft TechHer Conference</p>
+					</a>
+					<p class="image-content-body">Imposter Syndrome Talk</p>
+				</div>
+				<div class="col-sm-2 speakingitem">
+					<a href="https://www.athenaldn.com/copy-of-athena-hack" target="_blank">
+						<img class="center-block img-fluid" src="images/speaking/showcode.png" alt="ShowCode Athena logo"/>
+						<p class="image-content-header">April | ShowCode Athena Hackathon</p>
+					</a>
+					<p class="image-content-body">Tech for Good Panel</p>
+				</div>
+				<div class="col-sm-2 speakingitem">
+					<img class="center-block img-fluid" src="images/speaking/microsoft.png" alt="Microsoft logo"/>
+					<p class="image-content-header">April | Microsoft TechPathways</p>
+					<p class="image-content-body">Women in Technology Talk</p>
 				</div>
 			</div>
 
@@ -803,14 +809,14 @@
 					HerHelloWorld is where I answer early-in-career questions, review books, discuss changes in technology, share events that I attend or speak at, and address barriers for
 					women entering STEM.
 					</p>
-				</div>
+			</div>
 
-				<!-- HerHelloWorld Button -->
-				<div class="row justify-content-center">
-					<a class="btn btn-primary externalLinkColorButton" href="https://www.instagram.com/herhelloworld/" target="_blank">Follow HerHelloWorld</a>
-				</div>
+			<!-- HerHelloWorld Button -->
+			<div class="row justify-content-center">
+				<a class="btn btn-primary externalLinkColorButton" style="text-decoration: none;"href="https://www.instagram.com/herhelloworld/" target="_blank">Follow HerHelloWorld</a>
+			</div>
 
-				<h4>My message: Women can thrive in STEM.</h4>
+			<h4>My message: Women can thrive in STEM.</h4>
 			</div>
 			<!-- LightWidget WIDGET -->
 			<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
@@ -818,36 +824,36 @@
 		</section>
 
 		<section class="section container-fluid" id="recognition">
-				<h2 class="centeredTitle" >Recognition</h2>
-				<div class="row wide-gutter">
-					<div class="col-sm-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
-						<ul>
-							<li><h6 class="award recognitionFourth" >TechWomen100 Award Winner |</h6> 2019</li>
-							<li><h6 class="award recognitionFirst" >Code First: Girls One to Watch |</h6> 2019</li>
-							<li><h6 class="award recognitionSecond" >Future Stars of Tech Developer Award Shortlist |</h6> 2019</li>
-							<li><h6 class="award recognitionThird" >Winner of the UNITE2030: Hack for the Planet Hackathon |</h6> 2018</li>
-							<li><h6 class="award recognitionFourth" >IBM Prize for Best Final Year Performance |</h6> 2018</li>
-							<li><h6 class="award recognitionFirst" >IBM Prize for Excellent Placement Year Performance |</h6> 2018</li>
-							<li><h6 class="award recognitionSecond" >BCS High Performing Graduate Professional Membership Award |</h6> 2018</li>
-							<li><h6 class="award recognitionThird" >Computing Society Gold STAR Award |</h6> 2018</li>
-							<li><h6 class="award recognitionFourth" >Gold Course Representative Award |</h6> 2018</li>
-							<li><h6 class="award recognitionFirst" >Best Placement Student of the Year for the Faculty of Engineering and Physical Science |</h6> 2018</li>
-						</ul>
-					</div>
-					<div class="col-sm-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
-						<ul>
-							<li><h6 class="award recognitionSecond" >Winner of the Internet of Things Module Programming Competition |</h6> 2017</li>
-							<li><h6 class="award recognitionThird" >Member of the Students to STEMettes Programme |</h6> 2016 -2017</li>
-							<li><h6 class="award recognitionFourth" >The Sheppard Memorial Prize |</h6> 2016</li>
-							<li><h6 class="award recognitionFirst" >University of Surrey's Advanced Ballet Team |</h6> 2015-2016 </li>
-							<li><h6 class="award recognitionSecond" >Member of the Surrey’s Top Achievers Recognized and Supported Scheme |</h6> 2014-2018</li>
-							<li><h6 class="award recognitionThird" >National Honor Society Member |</h6> 2014</li>
-							<li><h6 class="award recognitionFourth" >Dance Team Scholar Athlete |</h6> 2010-2014</li>
-							<li><h6 class="award recognitionFirst" >Senior Service Award |</h6> 2014</li>
-							<li><h6 class="award recognitionSecond" >American Association of University Women Technology Award |</h6> 2013</li>
-						</ul>
-					</div>
+			<h2 class="centeredTitle" >Recognition</h2>
+			<div class="row wide-gutter">
+				<div class="col-sm-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+					<ul>
+						<li><h6 class="award recognitionFourth" >TechWomen100 Award Winner |</h6> 2019</li>
+						<li><h6 class="award recognitionFirst" >Code First: Girls One to Watch |</h6> 2019</li>
+						<li><h6 class="award recognitionSecond" >Future Stars of Tech Developer Award Shortlist |</h6> 2019</li>
+						<li><h6 class="award recognitionThird" >Winner of the UNITE2030: Hack for the Planet Hackathon |</h6> 2018</li>
+						<li><h6 class="award recognitionFourth" >IBM Prize for Best Final Year Performance |</h6> 2018</li>
+						<li><h6 class="award recognitionFirst" >IBM Prize for Excellent Placement Year Performance |</h6> 2018</li>
+						<li><h6 class="award recognitionSecond" >BCS High Performing Graduate Professional Membership Award |</h6> 2018</li>
+						<li><h6 class="award recognitionThird" >Computing Society Gold STAR Award |</h6> 2018</li>
+						<li><h6 class="award recognitionFourth" >Gold Course Representative Award |</h6> 2018</li>
+						<li><h6 class="award recognitionFirst" >Best Placement Student of the Year for the Faculty of Engineering and Physical Science |</h6> 2018</li>
+					</ul>
 				</div>
+				<div class="col-sm-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+					<ul>
+						<li><h6 class="award recognitionSecond" >Winner of the Internet of Things Module Programming Competition |</h6> 2017</li>
+						<li><h6 class="award recognitionThird" >Member of the Students to STEMettes Programme |</h6> 2016 -2017</li>
+						<li><h6 class="award recognitionFourth" >The Sheppard Memorial Prize |</h6> 2016</li>
+						<li><h6 class="award recognitionFirst" >University of Surrey's Advanced Ballet Team |</h6> 2015-2016 </li>
+						<li><h6 class="award recognitionSecond" >Member of the Surrey’s Top Achievers Recognized and Supported Scheme |</h6> 2014-2018</li>
+						<li><h6 class="award recognitionThird" >National Honor Society Member |</h6> 2014</li>
+						<li><h6 class="award recognitionFourth" >Dance Team Scholar Athlete |</h6> 2010-2014</li>
+						<li><h6 class="award recognitionFirst" >Senior Service Award |</h6> 2014</li>
+						<li><h6 class="award recognitionSecond" >American Association of University Women Technology Award |</h6> 2013</li>
+					</ul>
+				</div>
+			</div>
 		</section>
 
 		<section class="section container-fluid" id="connect">
