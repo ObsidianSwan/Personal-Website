@@ -1,35 +1,89 @@
-	.photocontainer {
-		position: relative;
-		margin-bottom: 30px;
-	}
+.photo-container {
+	overflow: hidden;
+  position: relative;
+  padding-bottom: 60%;
+}
 
-	.photocontainer img {
-		vertical-align: middle;
-	}
+.photo-container-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #f1f1f1;
+	opacity: 0;
+}
 
-	.photocontainer .content {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		height: 100%;
-		padding: 1%, 0, 1%, 0;
-		opacity: 0;
-	}
+.photo-container:hover .photo-container-overlay{
+  transition: all 0.4s;
+	opacity: 1;
+}
 
-	.photocontainer .content:hover {
-		background: rgba(0, 0, 0, 0.5);
-		color: #f1f1f1;
-		opacity: 1;
-		text-align: center;
-	}
+.photo-container img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
 
-	.photocontainer .content h6 {
-		text-transform: uppercase;
-		font-size: calc(7px + 0.5vw);
-		margin: 0;
-		position: absolute;
-		top: 50%;
-  	transform: translateY(-50%);
-		text-align: center;
-	  padding: 0 5% 0 5% ;
-	}
+.photo-container:hover .photo-container-content{
+	transition: all 0.4s;
+	opacity: 1;
+}
+
+.photo-container-content h6{
+	text-transform: uppercase;
+	font-size: calc(7px + 0.5vw);
+	position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+	bottom: 0;
+  transition: all 0.3s;
+	font-weight: bold;
+}
+
+
+
+
+/* Community photocontainer - to be replaced another time */
+
+.photocontainer {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.photocontainer img {
+	vertical-align: middle;
+}
+
+.photocontainer .content {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	padding: 1%, 0, 1%, 0;
+	opacity: 0;
+}
+
+.photocontainer .content:hover {
+	background: rgba(0, 0, 0, 0.5);
+	color: #f1f1f1;
+	opacity: 1;
+	text-align: center;
+	transition: all 0.4s;
+}
+
+.photocontainer .content h6 {
+	text-transform: uppercase;
+	font-size: calc(7px + 0.5vw);
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	padding: 0 5% 0 5% ;
+}
