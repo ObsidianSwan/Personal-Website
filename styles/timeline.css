@@ -111,7 +111,7 @@
 	}
 	.main-timeline .year span{
 		display: inline-block;
-		padding: 6px 25px 6px 35px;
+		padding: 6px 25px 6px 45px;
 		background: #f4a24c;
 		border-radius: 0 50px 50px 0;
 		font-size: calc(10px + .3vw);
@@ -139,7 +139,7 @@
 
 	.main-timeline .timeline:nth-child(2n) .year span{
 		border-radius: 50px 0 0 50px;
-		padding: 6px 35px 6px 25px;
+		padding: 6px 45px 6px 25px;
 	}
 
 
