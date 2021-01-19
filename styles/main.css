@@ -26,7 +26,7 @@ img {
 	text-decoration: underline;
 }
 
-.section:nth-child(2n) img {
+.section:nth-child(2n) img, .photo-container {
 	box-shadow: 0px 4px 10px 0px #0e7987;
 }
 
@@ -74,13 +74,43 @@ img {
 	font-weight: bold;
 }
 
-.logoImage {
-	margin: 0 2% 0 2%;
+#featuredin .featureBlocks {
+	display: flex !important;
+	display:inline-block; 
+	justify-content: center !important;
 }
 
-.logoImage img{
+#featuredin .featureBlocks div{
+	max-width: 245px;
+	min-width: 240px;
+}
+
+.featureBlocks {
+	margin: 0 2%;
+	justify-content: center;
+}
+
+.dualBlock {
+	text-align: center;
+}
+
+.dualBlock .block {
+	display: inline-block;
+}
+
+.featureBlocks img{
 	margin: 0 0 0 0;
 	box-shadow: 0px 0px 0px 0px;
+}
+
+.featureBlocks div{
+	padding: 0 15px;
+	font-size: .9rem;
+}
+
+.featureColumn div {
+	max-width: 245px;
+	min-width: 240px;
 }
 
 #connect {
@@ -135,8 +165,17 @@ img {
 }
 
 #communityImages div {
-  padding: 0;
+  	padding: 0;
 	margin: 0;
+}
+
+#speaking h6 {
+    display: inline;
+	font-weight: bold;
+}
+
+#speaking a {
+    font-weight: normal;
 }
 
 #graduate p {
@@ -177,15 +216,15 @@ img {
 	padding: 3%;
 }
 
-.communityOrange { background-color: #f4a24c; }
+.backgroundColorOrange { background-color: #f4a24c; }
 
-.communityPink { background-color: #f26f77; }
+.backgroundColorPink { background-color: #f26f77; }
 
-.communityBlue { background-color: #13a3b5; }
+.backgroundColorBlue { background-color: #13a3b5; }
 
-.communityGreen { background-color: #a6d050; }
+.backgroundColorGreen { background-color: #a6d050; }
 
-.recognitionFirst { color: #f4a24c; }
-.recognitionSecond { color: #f26f77; }
-.recognitionThird { color: #13a3b5; }
-.recognitionFourth { color: #a6d050; }
+.colorOrange { color: #f4a24c; }
+.colorPink { color: #f26f77; }
+.colorBlue { color: #13a3b5; }
+.colorGreen { color: #a6d050; }
